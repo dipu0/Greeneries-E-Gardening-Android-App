@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl1"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/shape_rect01"
+        android:padding="10dp">
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:background="@null"
+            android:src="@drawable/ic_arrow_down" />
+
+        <TextView
+            android:id="@+id/nameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="Product Delails"
+            android:textColor="@color/colorWhite"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/editBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:layout_toStartOf="@id/deleteBtn"
+            android:layout_toLeftOf="@id/deleteBtn"
+            android:background="@null"
+            android:src="@drawable/ic_edit_white" />
+
+        <ImageButton
+            android:id="@+id/deleteBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/editBtn"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:background="@null"
+            android:src="@drawable/ic_delete_white" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/productIV"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_below="@+id/rl1"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="25dp"
+        android:adjustViewBounds="true"
+        android:background="@color/colorPrimary"
+        android:padding="5dp"
+        android:src="@drawable/ic_cart_type2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="100dp"
+        android:layout_toRightOf="@id/productIV"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/discountPercTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shap_rect05"
+            android:padding="5dp"
+            android:paddingEnd="5dp"
+            android:paddingRight="5dp"
+            android:text="10% Off"
+            android:textColor="@color/colorGreen"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/titleTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Product Title"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/descriptionTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Product Description"
+            android:textColor="@color/colorBlack" />
+
+        <TextView
+            android:id="@+id/categoryTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Category"
+            android:textColor="@color/colorBlack" />
+
+        <TextView
+            android:id="@+id/quantityTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Quantity"
+            android:textColor="@color/colorBlack" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/discountPriceTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:text="\u09F3 10"
+                android:textColor="@color/colorGray02" />
+
+            <TextView
+                android:id="@+id/orignalPriceTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/discountPriceTV"
+                android:layout_toRightOf="@id/discountPriceTV"
+                android:text="\u09F3 20"
+                android:textColor="@color/colorGray02" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

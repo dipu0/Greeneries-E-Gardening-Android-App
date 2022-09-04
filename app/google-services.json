@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "372990258458",
+    "project_id": "greeneries-aa369",
+    "storage_bucket": "greeneries-aa369.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:372990258458:android:2ffb789d6d3c63cd1a90a3",
+        "android_client_info": {
+          "package_name": "com.chowdhuryelab.greeneries"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "372990258458-ir17m1jpfcuk0219tuuktv6ql594mms0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMhJtbzcA8dWct3zPRLuhFUDoT2aD4hxw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "372990258458-ir17m1jpfcuk0219tuuktv6ql594mms0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
