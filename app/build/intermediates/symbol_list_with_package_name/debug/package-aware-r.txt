@@ -1857,6 +1857,7 @@ drawable ic_quantity_gray
 drawable ic_rate_review_white
 drawable ic_remove_black
 drawable ic_search_gray
+drawable ic_shopping_cart_black
 drawable ic_star_white
 drawable ic_store_gray
 drawable ic_title_gray
@@ -2646,6 +2647,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout dialog_productdetails
 layout dialog_quantity
 layout material_chip_input_combo
 layout material_clock_display

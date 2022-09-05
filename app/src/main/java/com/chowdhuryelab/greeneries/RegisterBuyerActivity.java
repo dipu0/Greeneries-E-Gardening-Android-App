@@ -126,6 +126,13 @@ public class RegisterBuyerActivity extends AppCompatActivity implements Location
                 }
             }
         });
+        countryEt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loadLocationDialog();
+            }
+        });
+
         profileIv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -147,7 +154,24 @@ public class RegisterBuyerActivity extends AppCompatActivity implements Location
             }
         });
     }
+    private void loadLocationDialog() {
+        String[] location = {"Find your current location"};
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Select Location")
+                .setItems(location, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
 
+                        if (which == 0) {
+                            if (checkLocationPermission()) {
+                                detectLocation();
+                            } else {
+                                requestLocation();
+                            }
+                        }
+                    }
+                }).show();
+    }
     private void inputData() {
         name = nameEt.getText().toString().trim();
         phoneNumber = mobleNoEt.getText().toString().trim();

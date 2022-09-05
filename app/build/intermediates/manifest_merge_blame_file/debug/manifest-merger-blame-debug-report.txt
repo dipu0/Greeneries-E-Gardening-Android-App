@@ -7,28 +7,28 @@
 7
 8    <uses-sdk
 9        android:minSdkVersion="19"
-9-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml
+9-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml
 10        android:targetSdkVersion="32" />
-10-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml
+10-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml
 11
 12    <uses-permission android:name="android.permission.INTERNET" />
-12-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:7:5-67
-12-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:7:22-64
+12-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:7:5-67
+12-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:7:22-64
 13    <uses-permission android:name="android.permission.CAMERA" />
-13-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:8:5-65
-13-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:8:22-62
+13-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:8:5-65
+13-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:8:22-62
 14    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-14-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:9:5-81
-14-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:9:22-78
+14-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:9:5-81
+14-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:9:22-78
 15    <uses-permission android:name="android.permission.INTERNET" />
-15-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:7:5-67
-15-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:7:22-64
+15-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:7:5-67
+15-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:7:22-64
 16    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-16-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:11:5-79
-16-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:11:22-76
+16-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:11:5-79
+16-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:11:22-76
 17    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-17-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:12:5-81
-17-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:12:22-78
+17-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:12:5-81
+17-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:12:22-78
 18    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 18-->[com.google.firebase:firebase-auth:21.0.7] C:\Users\cdipu\.gradle\caches\transforms-3\04e0560ea667ad27c4842c4c5a43d809\transformed\jetified-firebase-auth-21.0.7\AndroidManifest.xml:24:5-79
 18-->[com.google.firebase:firebase-auth:21.0.7] C:\Users\cdipu\.gradle\caches\transforms-3\04e0560ea667ad27c4842c4c5a43d809\transformed\jetified-firebase-auth-21.0.7\AndroidManifest.xml:24:22-76
@@ -69,161 +69,161 @@
 35-->[com.google.android.gms:play-services-measurement:21.1.0] C:\Users\cdipu\.gradle\caches\transforms-3\71ee30f9d8328cb374cf2fec3d58dd5b\transformed\jetified-play-services-measurement-21.1.0\AndroidManifest.xml:26:22-107
 36
 37    <application
-37-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:17:5-94:19
+37-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:17:5-94:19
 38        android:allowBackup="true"
-38-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:18:9-35
+38-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:18:9-35
 39        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 39-->[androidx.core:core:1.8.0] C:\Users\cdipu\.gradle\caches\transforms-3\41aba826496b625d47b2a909577fe2f9\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
 40        android:debuggable="true"
 41        android:icon="@drawable/icon_shop"
-41-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:19:9-43
+41-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:19:9-43
 42        android:label="@string/app_name"
-42-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:20:9-41
+42-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:20:9-41
 43        android:roundIcon="@drawable/icon_shop"
-43-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:21:9-48
+43-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:21:9-48
 44        android:supportsRtl="true"
-44-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:22:9-35
+44-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:22:9-35
 45        android:testOnly="true"
 46        android:theme="@style/AppTheme.NoActionBar" >
-46-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:23:9-52
+46-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:23:9-52
 47        <service
-47-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:25:9-32:19
+47-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:25:9-32:19
 48            android:name="com.chowdhuryelab.greeneries.SendNotificationPack.MyFireBaseMessagingService"
-48-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:26:13-76
+48-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:26:13-76
 49            android:enabled="true"
-49-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:27:13-35
+49-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:27:13-35
 50            android:exported="true" >
-50-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:28:13-36
+50-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:28:13-36
 51            <intent-filter>
-51-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:29:13-31:29
+51-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:29:13-31:29
 52                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-52-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:30:17-78
-52-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:30:25-75
+52-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:30:17-78
+52-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:30:25-75
 53            </intent-filter>
 54        </service>
 55        <service
-55-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:33:9-40:19
+55-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:33:9-40:19
 56            android:name="com.chowdhuryelab.greeneries.SendNotificationPack.MyFirebaseIdService"
-56-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:34:13-69
+56-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:34:13-69
 57            android:enabled="true"
-57-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:35:13-35
+57-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:35:13-35
 58            android:exported="true" >
-58-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:36:13-36
+58-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:36:13-36
 59            <intent-filter>
-59-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:37:13-39:29
+59-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:37:13-39:29
 60                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
-60-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:38:17-80
-60-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:38:25-77
+60-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:38:17-80
+60-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:38:25-77
 61            </intent-filter>
 62        </service>
 63
 64        <activity android:name="com.chowdhuryelab.greeneries.PaymentActivity" />
-64-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:42:9-53
-64-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:42:19-50
+64-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:42:9-53
+64-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:42:19-50
 65        <activity android:name="com.chowdhuryelab.greeneries.WriteReviewActivity" />
-65-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:43:9-57
-65-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:43:19-54
+65-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:43:9-57
+65-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:43:19-54
 66        <activity android:name="com.chowdhuryelab.greeneries.ShopReviewActivity" />
-66-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:44:9-56
-66-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:44:19-53
+66-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:44:9-56
+66-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:44:19-53
 67        <activity android:name="com.chowdhuryelab.greeneries.OrderDetailsShopActivity" />
-67-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:45:9-62
-67-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:45:19-59
+67-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:45:9-62
+67-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:45:19-59
 68        <activity android:name="com.chowdhuryelab.greeneries.OrderDetailsBuyerActivity" />
-68-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:46:9-63
-68-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:46:19-60
+68-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:46:9-63
+68-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:46:19-60
 69        <activity android:name="com.chowdhuryelab.greeneries.CartActivity" />
-69-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:47:9-50
-69-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:47:19-47
+69-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:47:9-50
+69-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:47:19-47
 70        <activity
-70-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:48:9-50:57
+70-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:48:9-50:57
 71            android:name="com.chowdhuryelab.greeneries.ShopDetailsActivity"
-71-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:49:13-48
+71-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:49:13-48
 72            android:windowSoftInputMode="stateHidden" />
-72-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:50:13-54
+72-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:50:13-54
 73        <activity android:name="com.chowdhuryelab.greeneries.EditProductActivity" />
-73-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:51:9-57
-73-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:51:19-54
+73-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:51:9-57
+73-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:51:19-54
 74        <activity android:name="com.chowdhuryelab.greeneries.AddProductActivity" />
-74-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:52:9-56
-74-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:52:19-53
+74-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:52:9-56
+74-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:52:19-53
 75        <activity android:name="com.chowdhuryelab.greeneries.ProfileEditSellerActivity" />
-75-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:53:9-63
-75-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:53:19-60
+75-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:53:9-63
+75-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:53:19-60
 76        <activity android:name="com.chowdhuryelab.greeneries.ProfileEditBuyerActivity" />
-76-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:54:9-62
-76-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:54:19-59
+76-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:54:9-62
+76-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:54:19-59
 77        <activity
-77-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:55:9-57:57
+77-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:55:9-57:57
 78            android:name="com.chowdhuryelab.greeneries.MainBuyerActivity"
-78-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:56:13-46
+78-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:56:13-46
 79            android:windowSoftInputMode="stateHidden" />
-79-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:57:13-54
+79-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:57:13-54
 80        <activity
-80-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:58:9-60:57
+80-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:58:9-60:57
 81            android:name="com.chowdhuryelab.greeneries.MainSellerActivity"
-81-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:59:13-47
+81-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:59:13-47
 82            android:windowSoftInputMode="stateHidden" />
-82-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:60:13-54
+82-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:60:13-54
 83        <activity android:name="com.chowdhuryelab.greeneries.ForgotPasswordActivity" />
-83-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:61:9-60
-83-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:61:19-57
+83-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:61:9-60
+83-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:61:19-57
 84        <activity android:name="com.chowdhuryelab.greeneries.RegisterBuyerActivity" />
-84-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:62:9-59
-84-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:62:19-56
+84-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:62:9-59
+84-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:62:19-56
 85        <activity android:name="com.chowdhuryelab.greeneries.RegisterSellerActivity" />
-85-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:63:9-60
-85-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:63:19-57
+85-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:63:9-60
+85-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:63:19-57
 86        <activity
-86-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:64:9-66:57
+86-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:64:9-66:57
 87            android:name="com.chowdhuryelab.greeneries.LoginActivity"
-87-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:65:13-42
+87-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:65:13-42
 88            android:windowSoftInputMode="stateHidden" />
-88-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:66:13-54
+88-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:66:13-54
 89        <activity
-89-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:67:9-75:20
+89-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:67:9-75:20
 90            android:name="com.chowdhuryelab.greeneries.SplashActivity"
-90-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:68:13-43
+90-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:68:13-43
 91            android:exported="true" >
-91-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:69:13-36
+91-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:69:13-36
 92            <intent-filter>
-92-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:70:13-74:29
+92-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:70:13-74:29
 93                <action android:name="android.intent.action.MAIN" />
-93-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:71:17-69
-93-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:71:25-66
+93-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:71:17-69
+93-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:71:25-66
 94
 95                <category android:name="android.intent.category.LAUNCHER" />
-95-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:73:17-77
-95-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:73:27-74
+95-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:73:17-77
+95-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:73:27-74
 96            </intent-filter>
 97        </activity>
 98
 99        <meta-data
-99-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:77:9-79:57
+99-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:77:9-79:57
 100            android:name="preloaded_fonts"
-100-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:78:13-43
+100-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:78:13-43
 101            android:resource="@array/preloaded_fonts" />
-101-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:79:13-54
+101-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:79:13-54
 102        <!--
 103 Set custom default icon. This is used when no icon is set for incoming notification messages.
 104     See README(https://goo.gl/l4GJaQ) for more.
 105        -->
 106        <meta-data
-106-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:84:9-86:54
+106-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:84:9-86:54
 107            android:name="com.google.firebase.messaging.default_notification_icon"
-107-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:85:13-83
+107-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:85:13-83
 108            android:resource="@drawable/icon_shop" />
-108-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:86:13-51
+108-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:86:13-51
 109        <!--
 110 Set color used with incoming notification messages. This is used when no color is set for the incoming
 111             notification message. See README(https://goo.gl/6BKBk7) for more.
 112        -->
 113        <meta-data
-113-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:91:9-93:53
+113-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:91:9-93:53
 114            android:name="com.google.firebase.messaging.default_notification_color"
-114-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:92:13-84
+114-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:92:13-84
 115            android:resource="@color/colorAccent" />
-115-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:93:13-50
+115-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:93:13-50
 116
 117        <activity
 117-->[com.google.firebase:firebase-auth:21.0.7] C:\Users\cdipu\.gradle\caches\transforms-3\04e0560ea667ad27c4842c4c5a43d809\transformed\jetified-firebase-auth-21.0.7\AndroidManifest.xml:27:9-44:20
@@ -403,10 +403,10 @@
 210            android:exported="false" >
 210-->[com.google.firebase:firebase-messaging:23.0.7] C:\Users\cdipu\.gradle\caches\transforms-3\3424f46ec2609fc73f0810be3b263587\transformed\jetified-firebase-messaging-23.0.7\AndroidManifest.xml:48:13-37
 211            <intent-filter android:priority="-500" >
-211-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:29:13-31:29
+211-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:29:13-31:29
 212                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-212-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:30:17-78
-212-->D:\apk\CSE489\greeneries\app\src\main\AndroidManifest.xml:30:25-75
+212-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:30:17-78
+212-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:30:25-75
 213            </intent-filter>
 214        </service>
 215

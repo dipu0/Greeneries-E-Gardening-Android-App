@@ -180,10 +180,13 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/discountPercentTV"
                 android:layout_centerHorizontal="true"
-                android:layout_margin="10dp"
-                android:background="@color/colorPrimary"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
                 android:minWidth="150dp"
                 android:text="Add Product"
+                android:background="@drawable/shape_rect02"
                 android:textColor="@color/colorWhite" />
         </RelativeLayout>
 

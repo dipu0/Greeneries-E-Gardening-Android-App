@@ -28,6 +28,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -125,6 +126,14 @@ public class ProfileEditBuyerActivity extends AppCompatActivity implements Locat
             }
         });
 
+        countryEt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loadLocationDialog();
+            }
+        });
+
+
         updateUserBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -139,6 +148,25 @@ public class ProfileEditBuyerActivity extends AppCompatActivity implements Locat
                 showImagePickDialog();
             }
         });
+
+    }
+    private void loadLocationDialog() {
+        String[] location = {"Find your current location", "Remove location"};
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Select Category")
+                .setItems(location, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        if (which == 0) {
+                            if (checkLocationPermission()) {
+                                detectLocation();
+                            } else {
+                                requestLocation();
+                            }
+                        }
+                    }
+                }).show();
     }
 
     private void inputData() {
@@ -340,6 +368,8 @@ public class ProfileEditBuyerActivity extends AppCompatActivity implements Locat
         longitude = location.getLongitude();
 
         findAddress();
+
+
     }
 
     private void findAddress() {
@@ -362,6 +392,7 @@ public class ProfileEditBuyerActivity extends AppCompatActivity implements Locat
         }catch (Exception e){
             Toast.makeText(this, ""+e.getMessage(), Toast.LENGTH_SHORT).show();
         }
+
     }
 
     @Override

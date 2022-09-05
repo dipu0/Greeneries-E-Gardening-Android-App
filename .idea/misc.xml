@@ -37,6 +37,31 @@
         <entry key="..\:/Users/shash/AndroidStudioProjects/GroceryApp-master/app/src/main/res/layout/row_shop.xml" value="0.25" />
         <entry key="..\:/Users/shash/Downloads/GroceryApp-master (3)/GroceryApp-master/app/src/main/res/layout/activity_main_seller.xml" value="0.1" />
         <entry key="..\:/Users/shash/Downloads/GroceryApp-master (3)/GroceryApp-master/app/src/main/res/layout/activity_register_seller.xml" value="0.1" />
+        <entry key="..\:/apk/CSE489/Greeneries-E-Gardening-Android-App/app/src/main/res/drawable/ic_baseline_add_shopping_cart_24.xml" value="0.1865" />
+        <entry key="..\:/apk/CSE489/Greeneries-E-Gardening-Android-App/app/src/main/res/drawable/ic_cart_white.xml" value="0.1865" />
+        <entry key="..\:/apk/CSE489/Greeneries-E-Gardening-Android-App/app/src/main/res/drawable/ic_shopping_cart_black.xml" value="0.1865" />
+        <entry key="..\:/apk/CSE489/Greeneries-E-Gardening-Android-App/app/src/main/res/layout/activity_add_product.xml" value="0.29421696918531026" />
+        <entry key="..\:/apk/CSE489/Greeneries-E-Gardening-Android-App/app/src/main/res/layout/activity_cart.xml" value="0.297990594271056" />
+        <entry key="..\:/apk/CSE489/Greeneries-E-Gardening-Android-App/app/src/main/res/layout/activity_edit_product.xml" value="0.297990594271056" />
+        <entry key="..\:/apk/CSE489/Greeneries-E-Gardening-Android-App/app/src/main/res/layout/activity_forgot_password.xml" value="0.297990594271056" />
+        <entry key="..\:/apk/CSE489/Greeneries-E-Gardening-Android-App/app/src/main/res/layout/activity_main_buyer.xml" value="0.297990594271056" />
+        <entry key="..\:/apk/CSE489/Greeneries-E-Gardening-Android-App/app/src/main/res/layout/activity_order_details_buyer.xml" value="0.297990594271056" />
+        <entry key="..\:/apk/CSE489/Greeneries-E-Gardening-Android-App/app/src/main/res/layout/activity_order_details_shop.xml" value="0.297990594271056" />
+        <entry key="..\:/apk/CSE489/Greeneries-E-Gardening-Android-App/app/src/main/res/layout/activity_profile_edit_buyer.xml" value="0.297990594271056" />
+        <entry key="..\:/apk/CSE489/Greeneries-E-Gardening-Android-App/app/src/main/res/layout/activity_profile_edit_seller.xml" value="0.297990594271056" />
+        <entry key="..\:/apk/CSE489/Greeneries-E-Gardening-Android-App/app/src/main/res/layout/activity_register_buyer.xml" value="0.297990594271056" />
+        <entry key="..\:/apk/CSE489/Greeneries-E-Gardening-Android-App/app/src/main/res/layout/activity_register_seller.xml" value="0.297990594271056" />
+        <entry key="..\:/apk/CSE489/Greeneries-E-Gardening-Android-App/app/src/main/res/layout/bs_product_details_seller.xml" value="0.297990594271056" />
+        <entry key="..\:/apk/CSE489/Greeneries-E-Gardening-Android-App/app/src/main/res/layout/dialog_productDetails.xml" value="0.297990594271056" />
+        <entry key="..\:/apk/CSE489/Greeneries-E-Gardening-Android-App/app/src/main/res/layout/dialog_productdetails.xml" value="0.29421696918531026" />
+        <entry key="..\:/apk/CSE489/Greeneries-E-Gardening-Android-App/app/src/main/res/layout/dialog_quantity.xml" value="0.297990594271056" />
+        <entry key="..\:/apk/CSE489/Greeneries-E-Gardening-Android-App/app/src/main/res/layout/row_order_seller.xml" value="0.297990594271056" />
+        <entry key="..\:/apk/CSE489/Greeneries-E-Gardening-Android-App/app/src/main/res/layout/row_order_user.xml" value="0.297990594271056" />
+        <entry key="..\:/apk/CSE489/Greeneries-E-Gardening-Android-App/app/src/main/res/layout/row_ordered_items.xml" value="0.297990594271056" />
+        <entry key="..\:/apk/CSE489/Greeneries-E-Gardening-Android-App/app/src/main/res/layout/row_product_buyer.xml" value="0.297990594271056" />
+        <entry key="..\:/apk/CSE489/Greeneries-E-Gardening-Android-App/app/src/main/res/layout/row_product_cart.xml" value="0.297990594271056" />
+        <entry key="..\:/apk/CSE489/Greeneries-E-Gardening-Android-App/app/src/main/res/layout/row_product_seller.xml" value="0.297990594271056" />
+        <entry key="..\:/apk/CSE489/Greeneries-E-Gardening-Android-App/app/src/main/res/layout/row_shop.xml" value="0.297990594271056" />
         <entry key="..\:/apk/CSE489/GroceryApp-master/app/src/main/res/layout/activity_login.xml" value="0.358695652173913" />
         <entry key="..\:/apk/CSE489/GroceryApp-master/app/src/main/res/layout/activity_register_buyer.xml" value="0.358695652173913" />
         <entry key="..\:/apk/CSE489/greeneries/app/src/main/res/drawable/cart.xml" value="0.1865" />

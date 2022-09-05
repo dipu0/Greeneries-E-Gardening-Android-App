@@ -36,6 +36,10 @@ public class AdapterProductShow extends RecyclerView.Adapter<AdapterProductShow.
     public ArrayList<ModelProduct> productList, filterList;
     private FilterProductAll filter;
 
+    private double cost = 0;
+    private double finalCost = 0;
+    private double actualFinalCost = 0;
+    private int quantity = 0;
 
     public AdapterProductShow(Context context, ArrayList<ModelProduct> productList) {
         this.context = context;
@@ -52,63 +56,93 @@ public class AdapterProductShow extends RecyclerView.Adapter<AdapterProductShow.
         return new HolderAdapterProductShow(view);
     }
 
-    @Override
-    public void onBindViewHolder(@NonNull HolderAdapterProductShow holder, int position) {
+    class HolderAdapterProductShow extends RecyclerView.ViewHolder{
 
-        final ModelProduct modelProduct = productList.get(position);
-        String discountAvailable = modelProduct.getDiscountAvailable();
-        String discountPercent = modelProduct.getDiscountPercent();
-        String discountPrice = modelProduct.getDiscountPrice();
-        String productCategory = modelProduct.getPrductCategory();
-        String orignalPrice = modelProduct.getOrignalPrice();
-        String productDescription = modelProduct.getPrductDescription();
-        String productTitle = modelProduct.getPrductTitle();
-        String productQuantity = modelProduct.getPrductQuantity();
-        String productId = modelProduct.getPrductId();
-        String timestamp = modelProduct.getTimestamp();
-        String productIcon = modelProduct.getPrductIcon();
+        private ImageView productIv, details;
+        private TextView discountPercentTv, titleTv, descriptionTv, addToCartTv, discountPriceTv, orignalPriceTv;
 
-        holder.titleTv.setText(productTitle);
-        holder.discountPercentTv.setText(discountPercent);
-        holder.descriptionTv.setText(productDescription);
-        holder.orignalPriceTv.setText("\u09F3"+orignalPrice);
-        holder.discountPriceTv.setText("\u09F3"+discountPrice);
-        if (discountAvailable.equals("true")){
-            holder.discountPriceTv.setVisibility(View.VISIBLE);
-            holder.discountPercentTv.setVisibility(View.VISIBLE);
-            holder.orignalPriceTv.setPaintFlags(holder.orignalPriceTv.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
-        }
-        else {
-            holder.discountPriceTv.setVisibility(View.GONE);
-            holder.discountPercentTv.setVisibility(View.GONE);
-            holder.orignalPriceTv.setPaintFlags(0);
-        }
-        try {
-            Picasso.get().load(productIcon).placeholder(R.drawable.ic_cart_white).into(holder.productIv);
-        }
-        catch (Exception e) {
-            holder.productIv.setImageResource(R.drawable.ic_cart_white);
-        }
+        public HolderAdapterProductShow(@NonNull View itemView) {
+            super(itemView);
 
-        holder.addToCartTv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showQuantityDialog(modelProduct);
-            }
-        });
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
+            productIv =  itemView.findViewById(R.id.productIconIV);
+            discountPercentTv =  itemView.findViewById(R.id.discountPercentTV);
+            titleTv =  itemView.findViewById(R.id.titleTV);
+            descriptionTv =  itemView.findViewById(R.id.descriptionTV);
+            addToCartTv =  itemView.findViewById(R.id.addToCartTV);
+            discountPriceTv =  itemView.findViewById(R.id.discountPriceTV);
+            orignalPriceTv =  itemView.findViewById(R.id.orignalPriceTV);
+            productIv = itemView.findViewById(R.id.productIconIV);
+            details = itemView.findViewById(R.id.nextIV);
+        }
     }
 
-    private double cost = 0;
-    private double finalCost = 0;
-    private double actualFinalCost = 0;
-    private int quantity = 0;
-    private void showQuantityDialog(ModelProduct modelProduct) {
+
+    private void showDetailsDialog(ModelProduct modelProduct) {
+        View view = LayoutInflater.from(context).inflate(R.layout.dialog_productdetails, null);
+
+        ImageView productIV = view.findViewById(R.id.productIV);
+        final TextView titleTV = view.findViewById(R.id.titleTV);
+        TextView pQuantityTV = view.findViewById(R.id.pQuantityTV);
+        TextView descriptionTV = view.findViewById(R.id.descriptionTV);
+        TextView discountPercentTV = view.findViewById(R.id.discountPercentTV);
+        final TextView orignalPriceTV = view.findViewById(R.id.orignalPriceTV);
+        TextView discountPriceTV = view.findViewById(R.id.discountPriceTV);
+        final TextView finalPriceTV = view.findViewById(R.id.finalPriceTV);
+        ImageButton decreaseBtn = view.findViewById(R.id.decreaseBtn);
+        final TextView quantityTV = view.findViewById(R.id.quantityTV);
+        ImageButton increasBtn = view.findViewById(R.id.increasBtn);
+        Button continueBtn = view.findViewById(R.id.continueBtn);
+
+        final String productId = modelProduct.getPrductId();
+        String title = modelProduct.getPrductTitle();
+        String productQuantity = modelProduct.getPrductQuantity();
+        String description = modelProduct.getPrductDescription();
+        final String discountPercent = modelProduct.getDiscountPercent();
+        final String image = modelProduct.getPrductIcon();
+        final String discountAvailable = modelProduct.getDiscountAvailable();
+        final String category = modelProduct.getPrductCategory();
+        final String orgnalPrice = modelProduct.getOrignalPrice();
+        final String shopId = modelProduct.getUid();
+        String price;
+
+        if (discountAvailable.equals("true")){
+            discountPercentTV.setVisibility(View.VISIBLE);
+            discountPriceTV.setVisibility(View.VISIBLE);
+            price = modelProduct.getDiscountPrice();
+            orignalPriceTV.setPaintFlags(orignalPriceTV.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+        }
+        else {
+            discountPercentTV.setVisibility(View.GONE);
+            discountPriceTV.setVisibility(View.GONE);
+            price = modelProduct.getOrignalPrice();
+        }
+        cost = Double.parseDouble(price.replaceAll("\u09F3", ""));
+        finalCost = Double.parseDouble(price.replaceAll("\u09F3", ""));
+        actualFinalCost = Double.parseDouble(orgnalPrice.replaceAll("\u09F3", ""));
+        quantity = 1;
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        builder.setView(view);
+
+        try {
+            Picasso.get().load(image).placeholder(R.drawable.ic_shopping_cart_black).into(productIV);
+        }
+        catch (Exception e){
+            productIV.setImageResource(R.drawable.ic_shopping_cart_black);
+        }
+        titleTV.setText(""+title);
+        pQuantityTV.setText(""+productQuantity);
+        descriptionTV.setText(""+description);
+        discountPercentTV.setText(""+discountPercent);
+        orignalPriceTV.setText("\u09F3"+modelProduct.getOrignalPrice());
+        discountPriceTV.setText("\u09F3"+modelProduct.getDiscountPrice());
+
+
+        final AlertDialog dialog = builder.create();
+        dialog.show();
+
+    }
+    private void showCartDialog(ModelProduct modelProduct) {
         View view = LayoutInflater.from(context).inflate(R.layout.dialog_quantity, null);
 
         ImageView productIV = view.findViewById(R.id.productIV);
@@ -156,19 +190,17 @@ public class AdapterProductShow extends RecyclerView.Adapter<AdapterProductShow.
         builder.setView(view);
 
         try {
-            Picasso.get().load(image).placeholder(R.drawable.ic_cart_type2).into(productIV);
+            Picasso.get().load(image).placeholder(R.drawable.ic_shopping_cart_black).into(productIV);
         }
         catch (Exception e){
-            productIV.setImageResource(R.drawable.ic_cart_type2);
+            productIV.setImageResource(R.drawable.ic_shopping_cart_black);
         }
         titleTV.setText(""+title);
         pQuantityTV.setText(""+productQuantity);
         descriptionTV.setText(""+description);
         discountPercentTV.setText(""+discountPercent);
-        quantityTV.setText(""+quantity);
         orignalPriceTV.setText("\u09F3"+modelProduct.getOrignalPrice());
         discountPriceTV.setText("\u09F3"+modelProduct.getDiscountPrice());
-        finalPriceTV.setText("\u09F3"+finalCost);
 
         final AlertDialog dialog = builder.create();
         dialog.show();
@@ -281,6 +313,64 @@ public class AdapterProductShow extends RecyclerView.Adapter<AdapterProductShow.
     }
 
     @Override
+    public void onBindViewHolder(@NonNull HolderAdapterProductShow holder, int position) {
+
+        final ModelProduct modelProduct = productList.get(position);
+        String discountAvailable = modelProduct.getDiscountAvailable();
+        String discountPercent = modelProduct.getDiscountPercent();
+        String discountPrice = modelProduct.getDiscountPrice();
+        String productCategory = modelProduct.getPrductCategory();
+        String orignalPrice = modelProduct.getOrignalPrice();
+        String productDescription = modelProduct.getPrductDescription();
+        String productTitle = modelProduct.getPrductTitle();
+        String productQuantity = modelProduct.getPrductQuantity();
+        String productId = modelProduct.getPrductId();
+        String timestamp = modelProduct.getTimestamp();
+        String productIcon = modelProduct.getPrductIcon();
+
+        holder.titleTv.setText(productTitle);
+        holder.discountPercentTv.setText(discountPercent);
+        holder.descriptionTv.setText(productDescription);
+        holder.orignalPriceTv.setText("\u09F3"+orignalPrice);
+        holder.discountPriceTv.setText("\u09F3"+discountPrice);
+        if (discountAvailable.equals("true")){
+            holder.discountPriceTv.setVisibility(View.VISIBLE);
+            holder.discountPercentTv.setVisibility(View.VISIBLE);
+            holder.orignalPriceTv.setPaintFlags(holder.orignalPriceTv.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+        }
+        else {
+            holder.discountPriceTv.setVisibility(View.GONE);
+            holder.discountPercentTv.setVisibility(View.GONE);
+            holder.orignalPriceTv.setPaintFlags(0);
+        }
+        try {
+            Picasso.get().load(productIcon).placeholder(R.drawable.ic_shopping_cart_black).into(holder.productIv);
+        }
+        catch (Exception e) {
+            holder.productIv.setImageResource(R.drawable.ic_shopping_cart_black);
+        }
+
+        holder.addToCartTv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showCartDialog(modelProduct);
+            }
+        });
+        holder.details.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDetailsDialog(modelProduct);
+            }
+        });
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDetailsDialog(modelProduct);
+            }
+        });
+    }
+
+    @Override
     public int getItemCount() {
         return productList.size();
     }
@@ -293,22 +383,4 @@ public class AdapterProductShow extends RecyclerView.Adapter<AdapterProductShow.
         return filter;
     }
 
-    class HolderAdapterProductShow extends RecyclerView.ViewHolder{
-
-        private ImageView productIv;
-        private TextView discountPercentTv, titleTv, descriptionTv, addToCartTv, discountPriceTv, orignalPriceTv;
-
-        public HolderAdapterProductShow(@NonNull View itemView) {
-            super(itemView);
-
-            productIv =  itemView.findViewById(R.id.productIconIV);
-            discountPercentTv =  itemView.findViewById(R.id.discountPercentTV);
-            titleTv =  itemView.findViewById(R.id.titleTV);
-            descriptionTv =  itemView.findViewById(R.id.descriptionTV);
-            addToCartTv =  itemView.findViewById(R.id.addToCartTV);
-            discountPriceTv =  itemView.findViewById(R.id.discountPriceTV);
-            orignalPriceTv =  itemView.findViewById(R.id.orignalPriceTV);
-            productIv = itemView.findViewById(R.id.productIconIV);
-        }
-    }
 }

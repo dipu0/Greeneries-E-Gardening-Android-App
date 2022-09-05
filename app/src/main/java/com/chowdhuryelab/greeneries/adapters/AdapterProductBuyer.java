@@ -93,13 +93,19 @@ public class AdapterProductBuyer extends RecyclerView.Adapter<AdapterProductBuye
         holder.addToCartTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showQuantityDialog(modelProduct);
+                showCartDialog(modelProduct);
+            }
+        });
+        holder.details.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDetailsDialog(modelProduct);
             }
         });
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                showDetailsDialog(modelProduct);
             }
         });
     }
@@ -108,7 +114,72 @@ public class AdapterProductBuyer extends RecyclerView.Adapter<AdapterProductBuye
     private double finalCost = 0;
     private double actualFinalCost = 0;
     private int quantity = 0;
-    private void showQuantityDialog(ModelProduct modelProduct) {
+    private void showDetailsDialog(ModelProduct modelProduct) {
+        View view = LayoutInflater.from(context).inflate(R.layout.dialog_productdetails, null);
+
+        ImageView productIV = view.findViewById(R.id.productIV);
+        final TextView titleTV = view.findViewById(R.id.titleTV);
+        TextView pQuantityTV = view.findViewById(R.id.pQuantityTV);
+        TextView descriptionTV = view.findViewById(R.id.descriptionTV);
+        TextView discountPercentTV = view.findViewById(R.id.discountPercentTV);
+        final TextView orignalPriceTV = view.findViewById(R.id.orignalPriceTV);
+        TextView discountPriceTV = view.findViewById(R.id.discountPriceTV);
+        final TextView finalPriceTV = view.findViewById(R.id.finalPriceTV);
+        ImageButton decreaseBtn = view.findViewById(R.id.decreaseBtn);
+        final TextView quantityTV = view.findViewById(R.id.quantityTV);
+        ImageButton increasBtn = view.findViewById(R.id.increasBtn);
+        Button continueBtn = view.findViewById(R.id.continueBtn);
+
+        final String productId = modelProduct.getPrductId();
+        String title = modelProduct.getPrductTitle();
+        String productQuantity = modelProduct.getPrductQuantity();
+        String description = modelProduct.getPrductDescription();
+        final String discountPercent = modelProduct.getDiscountPercent();
+        final String image = modelProduct.getPrductIcon();
+        final String discountAvailable = modelProduct.getDiscountAvailable();
+        final String category = modelProduct.getPrductCategory();
+        final String orgnalPrice = modelProduct.getOrignalPrice();
+        final String shopId = modelProduct.getUid();
+        String price;
+
+        if (discountAvailable.equals("true")){
+            discountPercentTV.setVisibility(View.VISIBLE);
+            discountPriceTV.setVisibility(View.VISIBLE);
+            price = modelProduct.getDiscountPrice();
+            orignalPriceTV.setPaintFlags(orignalPriceTV.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+        }
+        else {
+            discountPercentTV.setVisibility(View.GONE);
+            discountPriceTV.setVisibility(View.GONE);
+            price = modelProduct.getOrignalPrice();
+        }
+        cost = Double.parseDouble(price.replaceAll("\u09F3", ""));
+        finalCost = Double.parseDouble(price.replaceAll("\u09F3", ""));
+        actualFinalCost = Double.parseDouble(orgnalPrice.replaceAll("\u09F3", ""));
+        quantity = 1;
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        builder.setView(view);
+
+        try {
+            Picasso.get().load(image).placeholder(R.drawable.ic_shopping_cart_black).into(productIV);
+        }
+        catch (Exception e){
+            productIV.setImageResource(R.drawable.ic_shopping_cart_black);
+        }
+        titleTV.setText(""+title);
+        pQuantityTV.setText(""+productQuantity);
+        descriptionTV.setText(""+description);
+        discountPercentTV.setText(""+discountPercent);
+        orignalPriceTV.setText("\u09F3"+modelProduct.getOrignalPrice());
+        discountPriceTV.setText("\u09F3"+modelProduct.getDiscountPrice());
+
+
+        final AlertDialog dialog = builder.create();
+        dialog.show();
+
+    }
+    private void showCartDialog(ModelProduct modelProduct) {
         View view = LayoutInflater.from(context).inflate(R.layout.dialog_quantity, null);
 
         ImageView productIV = view.findViewById(R.id.productIV);
@@ -156,19 +227,17 @@ public class AdapterProductBuyer extends RecyclerView.Adapter<AdapterProductBuye
         builder.setView(view);
 
         try {
-            Picasso.get().load(image).placeholder(R.drawable.ic_cart_type2).into(productIV);
+            Picasso.get().load(image).placeholder(R.drawable.ic_shopping_cart_black).into(productIV);
         }
         catch (Exception e){
-            productIV.setImageResource(R.drawable.ic_cart_type2);
+            productIV.setImageResource(R.drawable.ic_shopping_cart_black);
         }
         titleTV.setText(""+title);
         pQuantityTV.setText(""+productQuantity);
         descriptionTV.setText(""+description);
         discountPercentTV.setText(""+discountPercent);
-        quantityTV.setText(""+quantity);
         orignalPriceTV.setText("\u09F3"+modelProduct.getOrignalPrice());
         discountPriceTV.setText("\u09F3"+modelProduct.getDiscountPrice());
-        finalPriceTV.setText("\u09F3"+finalCost);
 
         final AlertDialog dialog = builder.create();
         dialog.show();
@@ -203,7 +272,7 @@ public class AdapterProductBuyer extends RecyclerView.Adapter<AdapterProductBuye
             @Override
             public void onClick(View v) {
                 String title = titleTV.getText().toString().trim();
-                String price = finalPriceTV.getText().toString().trim().replace("", "");
+                String price = finalPriceTV.getText().toString().trim().replace("\u09F3", "");
                 String quantity = quantityTV.getText().toString().trim();
                 String actualPrice = "\u09F3" + actualFinalCost;
 
@@ -212,6 +281,7 @@ public class AdapterProductBuyer extends RecyclerView.Adapter<AdapterProductBuye
             }
         });
     }
+
 
     private void addToCart(String productId, String title,  String price, String quantity, String image_uri,
                            String discountPercent, String discountAvailable, String productCategory, String actualFinalPrice, String shopId) {
@@ -295,7 +365,7 @@ public class AdapterProductBuyer extends RecyclerView.Adapter<AdapterProductBuye
 
     class HolderAdapterBuyer extends RecyclerView.ViewHolder{
 
-        private ImageView productIv;
+        private ImageView productIv,details;
         private TextView discountPercentTv, titleTv, descriptionTv, addToCartTv, discountPriceTv, orignalPriceTv;
 
         public HolderAdapterBuyer(@NonNull View itemView) {
@@ -309,6 +379,7 @@ public class AdapterProductBuyer extends RecyclerView.Adapter<AdapterProductBuye
             discountPriceTv =  itemView.findViewById(R.id.discountPriceTV);
             orignalPriceTv =  itemView.findViewById(R.id.orignalPriceTV);
             productIv = itemView.findViewById(R.id.productIconIV);
+            details = itemView.findViewById(R.id.nextIV);
         }
     }
 }

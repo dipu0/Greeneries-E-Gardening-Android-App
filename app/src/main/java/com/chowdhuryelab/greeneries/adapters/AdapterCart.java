@@ -65,6 +65,7 @@ public class AdapterCart extends RecyclerView.Adapter<AdapterCart.HolderCart> {
         holder.discountPriceTv.setText(finalPrice);
         holder.quantityTv.setText(quantity);
         holder.discountPercentTv.setText(discountPercent);
+
         if (modelCart.getDiscountAvailable().equals("true")){
             holder.discountPercentTv.setVisibility(View.VISIBLE);
             holder.discountPriceTv.setVisibility(View.VISIBLE);
