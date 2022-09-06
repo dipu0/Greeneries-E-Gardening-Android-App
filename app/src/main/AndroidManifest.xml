@@ -50,6 +50,7 @@
             android:windowSoftInputMode="stateHidden" />
         <activity android:name=".EditProductActivity" />
         <activity android:name=".AddProductActivity" />
+        <activity android:name=".AddBlogActivity" />
         <activity android:name=".ProfileEditSellerActivity" />
         <activity android:name=".ProfileEditBuyerActivity" />
         <activity

@@ -1862,6 +1862,7 @@ drawable ic_star_white
 drawable ic_store_gray
 drawable ic_title_gray
 drawable icon_shop
+drawable liked
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
 drawable material_ic_edit_black_24dp
@@ -1991,6 +1992,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id addBlogBtn
 id addProductBtn
 id addToCartTV
 id addressET
@@ -2026,8 +2028,10 @@ id beginning
 id bestChoice
 id bidirectional
 id blocking
+id blogIV
 id blogRL
 id blogRv
+id blogerIV
 id bottom
 id bottombar
 id bounce
@@ -2234,6 +2238,7 @@ id line3
 id linear
 id listMode
 id list_item
+id ll1
 id loginBtn
 id logoutBtn
 id mapBtn
@@ -2291,6 +2296,7 @@ id mtrl_picker_text_input_range_end
 id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id multiply
+id name
 id nameET
 id nameTV
 id nameTv
@@ -2453,8 +2459,8 @@ id submenuarrow
 id submit_area
 id supportScrollUp
 id sv
-id tabAllBtn
-id tabBlogBtn
+id tabAllTv
+id tabBlogTv
 id tabMode
 id tabOrdersTV
 id tabProductTV
@@ -2609,6 +2615,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_add_blog
 layout activity_add_product
 layout activity_cart
 layout activity_edit_product
@@ -2698,6 +2705,7 @@ layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout row_blogs
 layout row_order_seller
 layout row_order_user
 layout row_ordered_items

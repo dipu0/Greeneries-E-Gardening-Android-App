@@ -2,18 +2,17 @@ package com.chowdhuryelab.greeneries;
 
 import android.widget.Filter;
 
-import com.chowdhuryelab.greeneries.adapters.AdapterProductBuyer;
-import com.chowdhuryelab.greeneries.adapters.AdapterProductShow;
+import com.chowdhuryelab.greeneries.adapters.AdapterAllProductShow;
 import com.chowdhuryelab.greeneries.models.ModelProduct;
 
 import java.util.ArrayList;
 
 public class FilterProductAll extends Filter {
 
-    private AdapterProductShow adapter;
+    private AdapterAllProductShow adapter;
     private ArrayList<ModelProduct> filterList;
 
-    public FilterProductAll(AdapterProductShow adapter, ArrayList<ModelProduct> filterList){
+    public FilterProductAll(AdapterAllProductShow adapter, ArrayList<ModelProduct> filterList){
         this.adapter = adapter;
         this.filterList = filterList;
     }

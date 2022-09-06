@@ -16,10 +16,11 @@ import android.widget.Toast;
 
 import com.chowdhuryelab.greeneries.SendNotificationPack.APIService;
 import com.chowdhuryelab.greeneries.SendNotificationPack.Client;
+import com.chowdhuryelab.greeneries.adapters.AdapterAllBlogShow;
 import com.chowdhuryelab.greeneries.adapters.AdapterOrderUser;
-import com.chowdhuryelab.greeneries.adapters.AdapterProductBuyer;
-import com.chowdhuryelab.greeneries.adapters.AdapterProductShow;
+import com.chowdhuryelab.greeneries.adapters.AdapterAllProductShow;
 import com.chowdhuryelab.greeneries.adapters.AdapterShop;
+import com.chowdhuryelab.greeneries.models.ModelBlog;
 import com.chowdhuryelab.greeneries.models.ModelOrderUser;
 import com.chowdhuryelab.greeneries.models.ModelProduct;
 import com.chowdhuryelab.greeneries.models.ModelShop;
@@ -27,6 +28,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -43,8 +45,9 @@ import java.util.HashMap;
 public class MainBuyerActivity extends AppCompatActivity {
 
     private String cartcount;
-    private TextView nameTv, emailTv, phoneTv, tabShopsTv, tabOrdersTv, cartCountTv;
-    private ImageButton logoutBtn, editProfileBtn, cartBtn, tabAllBtn, tabBlogBtn;
+    private TextView nameTv, emailTv, phoneTv, tabShopsTv, tabOrdersTv,tabAllTv, tabBlogTv, cartCountTv;
+    private ImageButton logoutBtn, editProfileBtn, cartBtn;
+    private FloatingActionButton addBlogBtn;
     private RelativeLayout shopRl, ordersRl, showAllProductRl, showAllBlogsRl;
     private ImageView profileIv;
     private RecyclerView shopRv, orderRv,productRv, showAllProductRv, showAllBlogsRv;
@@ -60,7 +63,10 @@ public class MainBuyerActivity extends AppCompatActivity {
     private AdapterShop adapterShop;
 
     private ArrayList<ModelProduct> productList;
-    private AdapterProductShow adapterProductShow;
+    private AdapterAllProductShow adapterProductShow;
+
+    private ArrayList<ModelBlog> blogList;
+    private AdapterAllBlogShow adapterAllBlogShow;
 
 
     private APIService apiService;
@@ -83,8 +89,8 @@ public class MainBuyerActivity extends AppCompatActivity {
         emailTv = findViewById(R.id.emailTV);
         phoneTv = findViewById(R.id.phoneTV);
         tabShopsTv = findViewById(R.id.tabShopsTV);
-        tabAllBtn = findViewById(R.id.tabAllBtn);
-        tabBlogBtn = findViewById(R.id.tabBlogBtn);
+        tabAllTv = findViewById(R.id.tabAllTv);
+        tabBlogTv = findViewById(R.id.tabBlogTv);
         tabOrdersTv = findViewById(R.id.tabOrdersTV);
         logoutBtn = findViewById(R.id.logoutBtn);
         editProfileBtn = findViewById(R.id.editProfileBtn);
@@ -99,7 +105,7 @@ public class MainBuyerActivity extends AppCompatActivity {
         showAllBlogsRv = findViewById(R.id.blogRv);
         orderRv = findViewById(R.id.orderRv);
         cartCountTv = findViewById(R.id.cartCounterTV);
-
+        addBlogBtn = findViewById(R.id.addBlogBtn);
         productRv = findViewById(R.id.productRV);
 
         apiService = Client.getClient("https://fcm.googleapis.com/").create(APIService.class);
@@ -132,6 +138,14 @@ public class MainBuyerActivity extends AppCompatActivity {
 //            }
 //        });
 
+        addBlogBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainBuyerActivity.this, AddBlogActivity.class));
+            }
+        });
+
+
         tabShopsTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -139,14 +153,14 @@ public class MainBuyerActivity extends AppCompatActivity {
             }
         });
 
-        tabAllBtn.setOnClickListener(new View.OnClickListener() {
+        tabAllTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showAllproductUI();
             }
         });
 
-        tabBlogBtn.setOnClickListener(new View.OnClickListener() {
+        tabBlogTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showAllBlogUI();
@@ -207,6 +221,12 @@ public class MainBuyerActivity extends AppCompatActivity {
         tabShopsTv.setTextColor(getResources().getColor(R.color.colorBlack));
         tabShopsTv.setBackgroundResource(R.drawable.shap_rect04);
 
+        tabAllTv.setTextColor(getResources().getColor(R.color.colorWhite));
+        tabAllTv.setBackgroundResource(android.R.color.transparent);
+
+        tabBlogTv.setTextColor(getResources().getColor(R.color.colorWhite));
+        tabBlogTv.setBackgroundColor(getResources().getColor(android.R.color.transparent));
+
         tabOrdersTv.setTextColor(getResources().getColor(R.color.colorWhite));
         tabOrdersTv.setBackgroundColor(getResources().getColor(android.R.color.transparent));
     }
@@ -219,6 +239,12 @@ public class MainBuyerActivity extends AppCompatActivity {
 
         tabOrdersTv.setTextColor(getResources().getColor(R.color.colorWhite));
         tabOrdersTv.setBackgroundColor(getResources().getColor(android.R.color.transparent));
+
+        tabAllTv.setTextColor(getResources().getColor(R.color.colorBlack));
+        tabAllTv.setBackgroundResource(R.drawable.shap_rect04);
+
+        tabBlogTv.setTextColor(getResources().getColor(R.color.colorWhite));
+        tabBlogTv.setBackgroundColor(getResources().getColor(android.R.color.transparent));
 
         tabShopsTv.setTextColor(getResources().getColor(R.color.colorWhite));
         tabShopsTv.setBackgroundColor(getResources().getColor(android.R.color.transparent));
@@ -233,6 +259,12 @@ public class MainBuyerActivity extends AppCompatActivity {
         tabOrdersTv.setTextColor(getResources().getColor(R.color.colorWhite));
         tabOrdersTv.setBackgroundColor(getResources().getColor(android.R.color.transparent));
 
+        tabBlogTv.setTextColor(getResources().getColor(R.color.colorBlack));
+        tabBlogTv.setBackgroundResource(R.drawable.shap_rect04);
+
+        tabAllTv.setTextColor(getResources().getColor(R.color.colorWhite));
+        tabAllTv.setBackgroundColor(getResources().getColor(android.R.color.transparent));
+
         tabShopsTv.setTextColor(getResources().getColor(R.color.colorWhite));
         tabShopsTv.setBackgroundColor(getResources().getColor(android.R.color.transparent));
 
@@ -246,6 +278,12 @@ public class MainBuyerActivity extends AppCompatActivity {
 
         tabOrdersTv.setTextColor(getResources().getColor(R.color.colorBlack));
         tabOrdersTv.setBackgroundResource(R.drawable.shap_rect04);
+
+        tabAllTv.setTextColor(getResources().getColor(R.color.colorWhite));
+        tabAllTv.setBackgroundResource(android.R.color.transparent);
+
+        tabBlogTv.setTextColor(getResources().getColor(R.color.colorWhite));
+        tabBlogTv.setBackgroundColor(getResources().getColor(android.R.color.transparent));
 
         tabShopsTv.setTextColor(getResources().getColor(R.color.colorWhite));
         tabShopsTv.setBackgroundColor(getResources().getColor(android.R.color.transparent));
@@ -398,7 +436,7 @@ public class MainBuyerActivity extends AppCompatActivity {
                                             productList.add(modelProduct);
                                         }
 
-                                        adapterProductShow = new AdapterProductShow(MainBuyerActivity.this, productList);
+                                        adapterProductShow = new AdapterAllProductShow(MainBuyerActivity.this, productList);
                                         showAllProductRv.setAdapter(adapterProductShow);
                                     }
                                 }
@@ -441,7 +479,46 @@ public class MainBuyerActivity extends AppCompatActivity {
 
     private void LoadAllBlogs(){
 
+        blogList = new ArrayList<>();
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Users");
+        ref.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                blogList.clear();
+                for (DataSnapshot ds : dataSnapshot.getChildren()){
+                    String uid = ""+ds.getRef().getKey();
 
+                    DatabaseReference ref = (DatabaseReference) FirebaseDatabase.getInstance().getReference("Users").child(uid).child("Blogs");
+                    //   ref.addValueEventListener(new ValueEventListener() {
+                    ref.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            if (dataSnapshot.exists()){
+                                for (DataSnapshot ds : dataSnapshot.getChildren()){
+                                    ModelBlog modelBlog = ds.getValue(ModelBlog.class);
+
+                                    blogList.add(modelBlog);
+                                }
+
+                                adapterAllBlogShow = new AdapterAllBlogShow(MainBuyerActivity.this, blogList);
+                                showAllBlogsRv.setAdapter(adapterAllBlogShow);
+                            }
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                        }
+                    });
+
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
 
     }
 }

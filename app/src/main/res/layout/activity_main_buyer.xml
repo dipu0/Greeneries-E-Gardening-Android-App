@@ -153,7 +153,18 @@
             app:stackFromEnd="true"
             app:reverseLayout="true"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            tools:listitem="@layout/row_shop"/>
+            tools:listitem="@layout/row_blogs"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/addBlogBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:backgroundTint="@color/colorAccent"
+            android:layout_gravity="right|bottom"
+            android:src="@drawable/ic_add_product_white" />
 
     </RelativeLayout>
 
@@ -195,21 +206,23 @@
                 android:text="Shops"
                 android:textColor="@color/colorBlack" />
 
-            <ImageButton
-                android:id="@+id/tabAllBtn"
+            <TextView
+                android:id="@+id/tabAllTv"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="0.2"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"/>
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="All Product"
+                android:textColor="@color/colorWhite"/>
 
-            <ImageButton
-                android:id="@+id/tabBlogBtn"
+            <TextView
+                android:id="@+id/tabBlogTv"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="0.2"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"/>
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Blogs"
+                android:textColor="@color/colorWhite" />
 
             <TextView
                 android:id="@+id/tabOrdersTV"
