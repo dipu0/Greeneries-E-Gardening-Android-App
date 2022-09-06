@@ -508,10 +508,6 @@
         "source": "C:\\Users\\cdipu\\.gradle\\daemon\\7.3.3\\com.chowdhuryelab.greeneries.app-pngs-35:\\drawable-xxxhdpi\\ic_location_white.png"
     },
     {
-        "merged": "com.chowdhuryelab.greeneries.app-merged_res-40:/layout_row_blogs.xml.flat",
-        "source": "com.chowdhuryelab.greeneries.app-main-42:/layout/row_blogs.xml"
-    },
-    {
         "merged": "C:\\Users\\cdipu\\.gradle\\daemon\\7.3.3\\com.chowdhuryelab.greeneries.app-merged_res-40:\\anim_right_animation.xml.flat",
         "source": "C:\\Users\\cdipu\\.gradle\\daemon\\7.3.3\\com.chowdhuryelab.greeneries.app-main-42:\\anim\\right_animation.xml"
     },
@@ -674,6 +670,10 @@
     {
         "merged": "C:\\Users\\cdipu\\.gradle\\daemon\\7.3.3\\com.chowdhuryelab.greeneries.app-merged_res-40:\\drawable-anydpi-v21_ic_star_white.xml.flat",
         "source": "C:\\Users\\cdipu\\.gradle\\daemon\\7.3.3\\com.chowdhuryelab.greeneries.app-pngs-35:\\drawable-anydpi-v21\\ic_star_white.xml"
+    },
+    {
+        "merged": "com.chowdhuryelab.greeneries.app-merged_res-40:/drawable_icon_shop_round.png.flat",
+        "source": "com.chowdhuryelab.greeneries.app-main-42:/drawable/icon_shop_round.png"
     },
     {
         "merged": "C:\\Users\\cdipu\\.gradle\\daemon\\7.3.3\\com.chowdhuryelab.greeneries.app-merged_res-40:\\drawable-ldpi_ic_note_gray.png.flat",

@@ -38,7 +38,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Md. Asad Chowdhury Dipu"
+                android:text="Name: "
                 android:textSize="20dp" />
 
         </LinearLayout>
@@ -60,30 +60,42 @@
             android:layout_below="@id/blogIV"
             android:gravity="center_horizontal">
 
+            <ImageButton
+                android:id="@+id/LikeIv"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="5dp"
+                android:adjustViewBounds="true"
+                android:backgroundTint="@color/colorWhite"
+                android:src="@drawable/liked"/>
+
             <TextView
                 android:id="@+id/titleTV"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_alignRight="@id/LikeIv"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
                 android:text="Title"
                 android:textAlignment="center"
                 android:textColor="@color/colorBlack"
-                android:layout_marginTop="10dp"
                 android:textSize="30dp"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/descriptionTV"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/titleTV"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentEnd="true"
+                android:layout_toRightOf="@id/LikeIv"
                 android:text="Blog Description"
                 android:textAlignment="center"
-                android:textSize="18dp"
-                android:textColor="@color/colorBlack" />
+                android:textColor="@color/colorBlack"
+                android:textSize="18dp" />
 
 
         </RelativeLayout>
@@ -98,8 +110,8 @@
             android:layout_marginRight="5dp"
             android:adjustViewBounds="true"
             android:scaleType="fitCenter"
-            android:visibility="invisible"
-            android:src="@drawable/ic_next_gray" />
+            android:src="@drawable/ic_next_gray"
+            android:visibility="invisible" />
 
     </RelativeLayout>
 

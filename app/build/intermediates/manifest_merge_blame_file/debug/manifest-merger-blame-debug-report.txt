@@ -79,8 +79,8 @@
 41-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:19:9-43
 42        android:label="@string/app_name"
 42-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:20:9-41
-43        android:roundIcon="@drawable/icon_shop"
-43-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:21:9-48
+43        android:roundIcon="@drawable/icon_shop_round"
+43-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:21:9-54
 44        android:supportsRtl="true"
 44-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:22:9-35
 45        android:testOnly="true"

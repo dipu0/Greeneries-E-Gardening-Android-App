@@ -1862,6 +1862,7 @@ drawable ic_star_white
 drawable ic_store_gray
 drawable ic_title_gray
 drawable icon_shop
+drawable icon_shop_round
 drawable liked
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -1923,6 +1924,7 @@ id FUNCTION
 id ImageView_image
 id LL
 id LL1
+id LikeIv
 id META
 id NO_DEBUG
 id RL

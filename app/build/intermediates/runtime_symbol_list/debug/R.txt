@@ -1861,6 +1861,7 @@ int drawable ic_star_white 0x7f0800ad
 int drawable ic_store_gray 0x7f0800ae
 int drawable ic_title_gray 0x7f0800af
 int drawable icon_shop 0x7f0800b0
+int drawable icon_shop_round 0x7f0800e0
 int drawable liked 0x7f0800b1
 int drawable material_ic_calendar_black_24dp 0x7f0800b2
 int drawable material_ic_clear_black_24dp 0x7f0800b3
@@ -1922,6 +1923,7 @@ int id FUNCTION 0x7f0a0006
 int id ImageView_image 0x7f0a0007
 int id LL 0x7f0a0008
 int id LL1 0x7f0a0009
+int id LikeIv 0x7f0a0282
 int id META 0x7f0a000a
 int id NO_DEBUG 0x7f0a000b
 int id RL 0x7f0a000c
