@@ -44,18 +44,6 @@
 
     </RelativeLayout>
 
-<!--    <ImageView-->
-<!--        android:id="@+id/iconIv"-->
-<!--        android:layout_width="40dp"-->
-<!--        android:layout_height="40dp"-->
-<!--        android:layout_centerHorizontal="true"-->
-<!--        android:layout_marginTop="60dp"-->
-<!--        android:layout_marginBottom="20dp"-->
-<!--        android:background="@drawable/shape_circle01"-->
-<!--        android:padding="5dp"-->
-<!--        android:src="@drawable/ic_key_white" />-->
-
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -66,15 +54,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <com.blogspot.atifsoftwares.circularimageview.CircularImageView
+            <ImageView
                 android:id="@+id/profileIV"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
                 android:layout_centerHorizontal="true"
-                android:src="@drawable/ic_person_gray"
-                app:c_border="true"
-                app:c_border_color="@color/colorPrimary"
-                app:c_border_width="1dp" />
+                android:src="@drawable/ic_person_gray"/>
 
             <EditText
                 android:id="@+id/nameET"
@@ -95,7 +80,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/nameET"
-                android:layout_margin="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
                 android:background="@drawable/shape_rect02"
                 android:drawableStart="@drawable/ic_phone_gray"
                 android:drawableLeft="@drawable/ic_phone_gray"
@@ -104,18 +92,35 @@
                 android:inputType="phone"
                 android:padding="10dp" />
 
+            <EditText
+                android:id="@+id/emailET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/phoneET"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/shape_rect02"
+                android:drawableStart="@drawable/ic_mail_gray"
+                android:drawableLeft="@drawable/ic_mail_gray"
+                android:drawablePadding="5dp"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:padding="10dp" />
+
+
             <LinearLayout
                 android:id="@+id/addressLL"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/phoneET"
+                android:layout_below="@id/emailET"
                 android:orientation="horizontal">
 
                 <EditText
                     android:id="@+id/countryET"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/nameET"
                     android:layout_margin="5dp"
                     android:layout_weight="1"
                     android:background="@drawable/shape_rect02"
@@ -130,7 +135,6 @@
                     android:id="@+id/stateET"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/nameET"
                     android:layout_margin="5dp"
                     android:layout_weight="1"
                     android:background="@drawable/shape_rect02"
@@ -145,7 +149,6 @@
                     android:id="@+id/cityET"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/nameET"
                     android:layout_margin="5dp"
                     android:layout_weight="1"
                     android:background="@drawable/shape_rect02"
@@ -156,6 +159,7 @@
                     android:inputType="textPostalAddress"
                     android:padding="10dp" />
             </LinearLayout>
+
 
             <EditText
                 android:id="@+id/addressET"
@@ -171,25 +175,13 @@
                 android:inputType="textPostalAddress|textMultiLine"
                 android:padding="10dp" />
 
-            <EditText
-                android:id="@+id/emailET"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/addressET"
-                android:layout_margin="5dp"
-                android:background="@drawable/shape_rect02"
-                android:drawableStart="@drawable/ic_mail_gray"
-                android:drawableLeft="@drawable/ic_mail_gray"
-                android:drawablePadding="5dp"
-                android:hint="Email"
-                android:inputType="textEmailAddress"
-                android:padding="10dp" />
+
 
             <EditText
                 android:id="@+id/passwordET"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/emailET"
+                android:layout_below="@+id/addressET"
                 android:layout_margin="5dp"
                 android:background="@drawable/shape_rect02"
                 android:drawableStart="@drawable/ic_lock_gray"

@@ -2413,6 +2413,7 @@ int id shopNameTV 0x7f0a01f2
 int id shopOpenSwitch 0x7f0a01f3
 int id shopRL 0x7f0a01f4
 int id shopRV 0x7f0a01f5
+int id shopdetailsLL 0x7f0a027b
 int id shortcut 0x7f0a01f6
 int id showCustom 0x7f0a01f7
 int id showHome 0x7f0a01f8

@@ -64,30 +64,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp">
-<!--            <androidx.cardview.widget.CardView-->
-<!--                android:id="@+id/cardView"-->
-<!--                android:layout_width="100dp"-->
-<!--                android:layout_height="100dp"-->
-<!--                app:cardCornerRadius="50dp"-->
-<!--                android:layout_centerHorizontal="true">-->
-<!--                <ImageView-->
-<!--                    android:id="@+id/profileIV"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="match_parent"-->
-<!--                    android:scaleType="centerCrop"-->
-<!--                    android:background="@drawable/border_profile"-->
-<!--                    android:src="@drawable/ic_person_gray"/>-->
-<!--            </androidx.cardview.widget.CardView>-->
 
-            <com.blogspot.atifsoftwares.circularimageview.CircularImageView
+            <ImageView
                 android:id="@+id/profileIV"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
                 android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_person_gray"
                 app:c_border="true"
-                app:c_border_width="1dp"
                 app:c_border_color="@color/colorPrimary"
-                android:src="@drawable/ic_person_gray"/>
+                app:c_border_width="1dp" />
 
             <EditText
                 android:id="@+id/nameET"
@@ -103,53 +89,86 @@
                 android:hint="Full Name"
                 android:inputType="textPersonName|textCapWords"/>
 
-            <EditText
-                android:id="@+id/shopNameET"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:padding="10dp"
-                android:background="@drawable/shape_rect02"
-                android:drawableStart="@drawable/ic_store_gray"
-                android:drawableLeft="@drawable/ic_store_gray"
-                android:drawablePadding="5dp"
-                android:layout_below="@+id/nameET"
-                android:hint="Shop Name"
-                android:inputType="textPersonName|textCapWords"/>
 
             <EditText
                 android:id="@+id/phoneET"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:padding="10dp"
+                android:layout_below="@+id/nameET"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
                 android:background="@drawable/shape_rect02"
                 android:drawableStart="@drawable/ic_phone_gray"
                 android:drawableLeft="@drawable/ic_phone_gray"
                 android:drawablePadding="5dp"
-                android:layout_below="@+id/shopNameET"
                 android:hint="Phone"
-                android:inputType="phone"/>
-
+                android:inputType="phone"
+                android:padding="10dp" />
             <EditText
-                android:id="@+id/deliveryfeeET"
+                android:id="@+id/emailET"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:padding="10dp"
-                android:background="@drawable/shape_rect02"
-                android:drawableStart="@drawable/ic_local_shipping_gray"
-                android:drawableLeft="@drawable/ic_local_shipping_gray"
-                android:drawablePadding="5dp"
                 android:layout_below="@+id/phoneET"
-                android:hint="Delivery Fee"
-                android:inputType="numberDecimal"/>
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/shape_rect02"
+                android:drawableStart="@drawable/ic_mail_gray"
+                android:drawableLeft="@drawable/ic_mail_gray"
+                android:drawablePadding="5dp"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:padding="10dp" />
+
+            <LinearLayout
+                android:id="@+id/shopdetailsLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/emailET">
+                <EditText
+                    android:id="@+id/shopNameET"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6.8"
+                    android:layout_below="@+id/emailET"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/shape_rect02"
+                    android:drawableStart="@drawable/ic_store_gray"
+                    android:drawableLeft="@drawable/ic_store_gray"
+                    android:drawablePadding="5dp"
+                    android:hint="Shop Name"
+                    android:inputType="textPersonName|textCapWords"
+                    android:padding="10dp" />
+                <EditText
+                    android:id="@+id/deliveryfeeET"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3.2"
+                    android:layout_margin="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/shape_rect02"
+                    android:drawableStart="@drawable/ic_local_shipping_gray"
+                    android:drawableLeft="@drawable/ic_local_shipping_gray"
+                    android:drawablePadding="5dp"
+                    android:layout_below="@+id/shopNameET"
+                    android:hint="Delivery Fee"
+                    android:inputType="numberDecimal"/>
+
+
+            </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/addressLL"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/deliveryfeeET"
+                android:layout_below="@id/shopdetailsLL"
                 android:orientation="horizontal">
                 <EditText
                     android:id="@+id/countryET"
@@ -162,7 +181,6 @@
                     android:drawableLeft="@drawable/ic_location_gray"
                     android:drawablePadding="5dp"
                     android:layout_weight="1"
-                    android:layout_below="@+id/nameET"
                     android:hint="Country"
                     android:inputType="textPostalAddress"/>
                 <EditText
@@ -176,7 +194,6 @@
                     android:drawableLeft="@drawable/ic_location_gray"
                     android:drawablePadding="5dp"
                     android:layout_weight="1"
-                    android:layout_below="@+id/nameET"
                     android:hint="State"
                     android:inputType="textPostalAddress"/>
                 <EditText
@@ -190,7 +207,6 @@
                     android:drawableLeft="@drawable/ic_location_gray"
                     android:drawablePadding="5dp"
                     android:layout_weight="1"
-                    android:layout_below="@+id/nameET"
                     android:hint="City"
                     android:inputType="textPostalAddress"/>
             </LinearLayout>
@@ -209,33 +225,23 @@
                 android:hint="Street Name"
                 android:inputType="textPostalAddress|textMultiLine"/>
 
-            <EditText
-                android:id="@+id/emailET"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:padding="10dp"
-                android:background="@drawable/shape_rect02"
-                android:drawableStart="@drawable/ic_mail_gray"
-                android:drawableLeft="@drawable/ic_mail_gray"
-                android:drawablePadding="5dp"
-                android:layout_below="@+id/addressET"
-                android:hint="Email"
-                android:inputType="textEmailAddress"/>
 
             <EditText
                 android:id="@+id/passwordET"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:padding="10dp"
+                android:layout_below="@+id/addressET"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
                 android:background="@drawable/shape_rect02"
                 android:drawableStart="@drawable/ic_lock_gray"
                 android:drawableLeft="@drawable/ic_lock_gray"
                 android:drawablePadding="5dp"
-                android:layout_below="@+id/emailET"
                 android:hint="Password"
-                android:inputType="textPassword"/>
+                android:inputType="textPassword"
+                android:padding="10dp" />
 
             <EditText
                 android:id="@+id/cpasswordET"

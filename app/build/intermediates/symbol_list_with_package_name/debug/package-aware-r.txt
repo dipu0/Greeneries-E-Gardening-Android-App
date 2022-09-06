@@ -2414,6 +2414,7 @@ id shopNameTV
 id shopOpenSwitch
 id shopRL
 id shopRV
+id shopdetailsLL
 id shortcut
 id showCustom
 id showHome
