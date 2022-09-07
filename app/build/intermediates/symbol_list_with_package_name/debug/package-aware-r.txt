@@ -2377,6 +2377,7 @@ id rectangles
 id registerSellerBtn
 id registerSellerTV
 id registerUserBtn
+id remember
 id reverseSawtooth
 id reviewET
 id reviewRV
@@ -2623,6 +2624,7 @@ layout activity_cart
 layout activity_edit_product
 layout activity_forgot_password
 layout activity_login
+layout activity_login2
 layout activity_main_buyer
 layout activity_main_seller
 layout activity_order_details_buyer

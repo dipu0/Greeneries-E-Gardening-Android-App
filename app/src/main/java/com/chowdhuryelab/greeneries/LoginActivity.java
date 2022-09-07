@@ -1,7 +1,9 @@
 package com.chowdhuryelab.greeneries;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Patterns;
@@ -10,6 +12,8 @@ import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -39,6 +43,13 @@ public class LoginActivity extends AppCompatActivity {
 
     private String email, password;
 
+    private CheckBox checkBoxRememberMe;
+
+    SharedPreferences sharedpreferences;
+    public static final String mypreference = "mypref";
+    public static final String spEmail = "emailKey";
+    public static final String spPass = "passKey";
+
     Animation leftAnimation;
 
     private FirebaseAuth mAuth;
@@ -49,7 +60,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(
                 WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_login2);
 
         mAuth = FirebaseAuth.getInstance();
         mProgressDialog = new ProgressDialog(this);
@@ -60,13 +71,23 @@ public class LoginActivity extends AppCompatActivity {
         passwordEt = findViewById(R.id.passwordET);
         fotgotTv = findViewById(R.id.forgotTV);
         noAccountTv = findViewById(R.id.noAccount);
+        checkBoxRememberMe = findViewById(R.id.remember);
         iconText = findViewById(R.id.iconText);
         loginBtn = findViewById(R.id.loginBtn);
-        iconShopIv = findViewById(R.id.iconIv);
+        //iconShopIv = findViewById(R.id.iconIv);
         leftAnimation = AnimationUtils.loadAnimation(this, R.anim.left_animation);
 
         iconText.setAnimation(leftAnimation);
-        iconShopIv.setAnimation(leftAnimation);
+        //iconShopIv.setAnimation(leftAnimation);
+
+        sharedpreferences = getSharedPreferences(mypreference, Context.MODE_PRIVATE);
+        if (sharedpreferences.contains(spEmail)) {
+            emailEt.setText(sharedpreferences.getString(spEmail, ""));
+        }
+        if (sharedpreferences.contains(spPass)) {
+            passwordEt.setText(sharedpreferences.getString(spPass, ""));
+        }
+
 
 
         noAccountTv.setOnClickListener(new View.OnClickListener() {
@@ -88,6 +109,26 @@ public class LoginActivity extends AppCompatActivity {
                 loginUser();
             }
         });
+
+        checkBoxRememberMe.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+              @Override
+              public void onCheckedChanged(CompoundButton buttonView,boolean isChecked) {
+                  // use isChecked value here to react to state changes on your checkbox
+                  shSave();
+              }
+          }
+        );
+
+    }
+
+    public void shSave() {
+        String e = emailEt.getText().toString();
+        String p = passwordEt.getText().toString();
+        SharedPreferences.Editor editor = sharedpreferences.edit();
+        editor.putString(spEmail, e);
+        editor.putString(spPass, p);
+        editor.commit();
     }
 
     private void loginUser() {

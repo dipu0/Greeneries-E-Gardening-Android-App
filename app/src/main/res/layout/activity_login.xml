@@ -34,6 +34,7 @@
         android:layout_marginBottom="20dp"
         android:background="@drawable/shape_circle01"
         android:padding="5dp"
+        android:visibility="invisible"
         android:src="@drawable/ic_key_white" />
 
     <ImageView
@@ -43,8 +44,8 @@
         android:layout_below="@id/iconsIv"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:transitionName="logo_image"
-        android:src="@drawable/shop" />
+        android:src="@drawable/shop"
+        android:transitionName="logo_image" />
 
     <TextView
         android:id="@+id/iconText"
@@ -147,8 +148,11 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/forgotTV"
                 android:layout_centerHorizontal="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
                 android:background="@drawable/shape_rect06"
-                android:layout_margin="20dp"
                 android:minWidth="150dp"
                 android:text="Login"
                 android:textColor="@color/colorWhite" />

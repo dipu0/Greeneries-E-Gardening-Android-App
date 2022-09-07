@@ -70,20 +70,20 @@
 36
 37    <application
 37-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:17:5-95:19
-38        android:allowBackup="true"
-38-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:18:9-35
-39        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-39-->[androidx.core:core:1.8.0] C:\Users\cdipu\.gradle\caches\transforms-3\41aba826496b625d47b2a909577fe2f9\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
-40        android:debuggable="true"
-41        android:icon="@drawable/icon_shop"
-41-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:19:9-43
-42        android:label="@string/app_name"
-42-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:20:9-41
-43        android:roundIcon="@drawable/icon_shop_round"
-43-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:21:9-54
-44        android:supportsRtl="true"
-44-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:22:9-35
-45        android:testOnly="true"
+38        android:name="androidx.multidex.MultiDexApplication"
+39        android:allowBackup="true"
+39-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:18:9-35
+40        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+40-->[androidx.core:core:1.8.0] C:\Users\cdipu\.gradle\caches\transforms-3\41aba826496b625d47b2a909577fe2f9\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
+41        android:debuggable="true"
+42        android:icon="@drawable/icon_shop"
+42-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:19:9-43
+43        android:label="@string/app_name"
+43-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:20:9-41
+44        android:roundIcon="@drawable/icon_shop_round"
+44-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:21:9-54
+45        android:supportsRtl="true"
+45-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:22:9-35
 46        android:theme="@style/AppTheme.NoActionBar" >
 46-->D:\apk\CSE489\Greeneries-E-Gardening-Android-App\app\src\main\AndroidManifest.xml:23:9-52
 47        <service
