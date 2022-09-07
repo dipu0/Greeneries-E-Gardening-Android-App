@@ -1899,6 +1899,7 @@ drawable shap_rect04
 drawable shap_rect05
 drawable shape_circle01
 drawable shape_circle02
+drawable shape_rect0
 drawable shape_rect01
 drawable shape_rect02
 drawable shape_rect05

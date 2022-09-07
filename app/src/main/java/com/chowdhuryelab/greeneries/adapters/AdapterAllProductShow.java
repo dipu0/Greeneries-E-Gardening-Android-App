@@ -201,6 +201,7 @@ public class AdapterAllProductShow extends RecyclerView.Adapter<AdapterAllProduc
         discountPercentTV.setText(""+discountPercent);
         orignalPriceTV.setText("\u09F3"+modelProduct.getOrignalPrice());
         discountPriceTV.setText("\u09F3"+modelProduct.getDiscountPrice());
+        finalPriceTV.setText("\u09F3"+finalCost);
 
         final AlertDialog dialog = builder.create();
         dialog.show();

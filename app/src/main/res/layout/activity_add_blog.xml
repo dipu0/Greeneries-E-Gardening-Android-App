@@ -76,7 +76,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="5dp"
                 android:layout_marginBottom="5dp"
-                android:background="@drawable/shape_rect02"
+                android:background="@drawable/shape_rect0"
                 android:drawableStart="@drawable/ic_title_gray"
                 android:drawableLeft="@drawable/ic_title_gray"
                 android:drawablePadding="10dp"

@@ -223,6 +223,8 @@ public class AdapterProductBuyer extends RecyclerView.Adapter<AdapterProductBuye
         actualFinalCost = Double.parseDouble(orgnalPrice.replaceAll("\u09F3", ""));
         quantity = 1;
 
+        finalPriceTV.setText("\u09F3"+cost);
+
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         builder.setView(view);
 
@@ -238,6 +240,7 @@ public class AdapterProductBuyer extends RecyclerView.Adapter<AdapterProductBuye
         discountPercentTV.setText(""+discountPercent);
         orignalPriceTV.setText("\u09F3"+modelProduct.getOrignalPrice());
         discountPriceTV.setText("\u09F3"+modelProduct.getDiscountPrice());
+        finalPriceTV.setText("\u09F3"+finalCost);
 
         final AlertDialog dialog = builder.create();
         dialog.show();
