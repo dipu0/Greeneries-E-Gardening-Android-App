@@ -4,7 +4,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -68,7 +70,7 @@ public class MainBuyerActivity extends AppCompatActivity {
     private ArrayList<ModelBlog> blogList;
     private AdapterAllBlogShow adapterAllBlogShow;
 
-
+    private RelativeLayout toolbar;
     private APIService apiService;
 
     @Override
@@ -83,8 +85,9 @@ public class MainBuyerActivity extends AppCompatActivity {
 
         cartcount = getIntent().getStringExtra("shopUid");
 
-        checkUser();
+        //checkUser();
 
+        toolbar = findViewById(R.id.toolBarRL);
         nameTv = findViewById(R.id.nameTV);
         emailTv = findViewById(R.id.emailTV);
         phoneTv = findViewById(R.id.phoneTV);
@@ -110,10 +113,17 @@ public class MainBuyerActivity extends AppCompatActivity {
 
         apiService = Client.getClient("https://fcm.googleapis.com/").create(APIService.class);
 
-        showShopUI();
-        UpdateToken();
 
-
+        FirebaseUser user = mAuth.getCurrentUser();
+        if (user == null){
+            showAllproductUI();
+            loadAllProduct();
+            LoadAllBlogs();
+        }
+        else {
+            loadMyInfo();
+            UpdateToken();
+        }
 
         logoutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -149,28 +159,110 @@ public class MainBuyerActivity extends AppCompatActivity {
         tabShopsTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showShopUI();
+
+                if (user == null){
+                    toolbar.setVisibility(View.INVISIBLE);
+                    AlertDialog.Builder builder = new AlertDialog.Builder(MainBuyerActivity.this);
+                    builder.setTitle("Login Alert")
+                            .setMessage("Are you sure, you want to continue ?")
+                            .setCancelable(false)
+                            .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    startActivity(new Intent(MainBuyerActivity.this, LoginActivity.class));
+                                    finish();;
+                                    //Toast.makeText(MainBuyerActivity.this,"Selected Option: YES",Toast.LENGTH_SHORT).show();
+                                }
+                            })
+                            .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    showAllproductUI();
+                                   // Toast.makeText(MainBuyerActivity.this,"Selected Option: No",Toast.LENGTH_SHORT).show();
+                                }
+                            });
+                    //Creating dialog box
+                    AlertDialog dialog  = builder.create();
+                    dialog.show();
+
+                }
+                else {
+
+                    showShopUI();
+                    checkUser();
+                }
+
             }
         });
 
         tabAllTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showAllproductUI();
+                if (user == null){
+                    toolbar.setVisibility(View.INVISIBLE);
+                    showAllproductUI();
+                }
+                else {
+
+                    checkUser();
+                    showAllproductUI();
+                }
+
+
+
             }
         });
 
         tabBlogTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showAllBlogUI();
+                if (user == null){
+                    toolbar.setVisibility(View.INVISIBLE);
+                    addBlogBtn.setVisibility(View.GONE);
+                    showAllBlogUI();
+                }else{
+                    showAllBlogUI();
+                }
+
             }
         });
 
         tabOrdersTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showOrdersUI();
+                if (user == null){
+                    toolbar.setVisibility(View.INVISIBLE);
+                    AlertDialog.Builder builder = new AlertDialog.Builder(MainBuyerActivity.this);
+                    builder.setTitle("Login Alert")
+                            .setMessage("Are you sure, you want to continue ?")
+                            .setCancelable(false)
+                            .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    startActivity(new Intent(MainBuyerActivity.this, LoginActivity.class));
+                                    finish();;
+                                   // Toast.makeText(MainBuyerActivity.this,"Selected Option: YES",Toast.LENGTH_SHORT).show();
+                                }
+                            })
+                            .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    showAllproductUI();
+                                    //Toast.makeText(MainBuyerActivity.this,"Selected Option: No",Toast.LENGTH_SHORT).show();
+                                }
+                            });
+                    //Creating dialog box
+                    AlertDialog dialog  = builder.create();
+                    dialog.show();
+
+                }
+                else {
+
+                    showOrdersUI();
+                    checkUser();
+
+                }
+
             }
         });
     }
@@ -297,6 +389,7 @@ public class MainBuyerActivity extends AppCompatActivity {
         }
         else {
             loadMyInfo();
+            UpdateToken();
         }
     }
 
@@ -432,7 +525,6 @@ public class MainBuyerActivity extends AppCompatActivity {
                                     if (dataSnapshot.exists()){
                                         for (DataSnapshot ds : dataSnapshot.getChildren()){
                                             ModelProduct modelProduct = ds.getValue(ModelProduct.class);
-
                                             productList.add(modelProduct);
                                         }
 

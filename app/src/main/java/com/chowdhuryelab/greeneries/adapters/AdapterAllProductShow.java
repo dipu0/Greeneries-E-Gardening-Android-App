@@ -2,6 +2,8 @@ package com.chowdhuryelab.greeneries.adapters;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Paint;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,11 +20,14 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.chowdhuryelab.greeneries.FilterProductAll;
+import com.chowdhuryelab.greeneries.LoginActivity;
+import com.chowdhuryelab.greeneries.MainBuyerActivity;
 import com.chowdhuryelab.greeneries.R;
 import com.chowdhuryelab.greeneries.models.ModelProduct;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
@@ -316,6 +321,9 @@ public class AdapterAllProductShow extends RecyclerView.Adapter<AdapterAllProduc
     @Override
     public void onBindViewHolder(@NonNull HolderAdapterProductShow holder, int position) {
 
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
+        FirebaseUser user = mAuth.getCurrentUser();
+
         final ModelProduct modelProduct = productList.get(position);
         String discountAvailable = modelProduct.getDiscountAvailable();
         String discountPercent = modelProduct.getDiscountPercent();
@@ -354,7 +362,35 @@ public class AdapterAllProductShow extends RecyclerView.Adapter<AdapterAllProduc
         holder.addToCartTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showCartDialog(modelProduct);
+                if (user == null){
+                    AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                    builder.setTitle("Login Alert")
+                            .setMessage("Are you sure, you want to continue ?")
+                            .setCancelable(false)
+                            .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    context.startActivity(new Intent(context, LoginActivity.class));
+
+                                }
+                            })
+                            .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+
+                                }
+                            });
+                    //Creating dialog box
+                    AlertDialog dialog  = builder.create();
+                    dialog.show();
+
+                }
+                else {
+
+                    showCartDialog(modelProduct);
+                }
+
+
             }
         });
         holder.details.setOnClickListener(new View.OnClickListener() {

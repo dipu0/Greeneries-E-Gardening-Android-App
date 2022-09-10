@@ -56,7 +56,8 @@ public class SplashActivity extends AppCompatActivity {
             public void run() {
                 FirebaseUser user = mAuth.getCurrentUser();
                 if (user == null){
-                    Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
+                    //Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
+                    Intent intent = new Intent(SplashActivity.this, MainBuyerActivity.class);
 //                    Pair[] pairs = new Pair[2];
 //                    pairs[0] = new Pair<View, String>(iconeIV, "logo_image");
 //                    pairs[1] = new Pair<View, String>(iconText, "logo_text");
