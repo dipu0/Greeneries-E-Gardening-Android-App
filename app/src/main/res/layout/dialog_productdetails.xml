@@ -12,8 +12,11 @@
             android:id="@+id/orignalPriceTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
-           android:layout_margin="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
             android:background="@drawable/shap_rect05"
             android:gravity="start"
             android:padding="5dp"
@@ -26,14 +29,32 @@
             android:id="@+id/discountPriceTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
             android:layout_toRightOf="@+id/orignalPriceTV"
             android:gravity="start"
             android:padding="5dp"
-            android:layout_margin="5dp"
             android:text="\u09F3 300"
             android:textAlignment="textStart"
             android:textColor="@color/colorBlack"
             android:textSize="35sp" />
+
+        <TextView
+            android:id="@+id/discountPercentTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/shape_rect05"
+            android:padding="5dp"
+            android:text="10% Off"
+            android:textColor="@color/colorWhite"
+            android:textSize="15dp" />
 
         <ImageView
             android:id="@+id/productIV"
@@ -59,46 +80,20 @@
             android:layout_marginTop="5dp"
             android:text="Product Title"
             android:textColor="@color/colorBlack"
-            android:textSize="35sp" />
-
-        <TextView
-            android:id="@+id/pQuantityTV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/titleTV"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="5dp"
-            android:text="Quantity"
-            android:textColor="@color/colorBlack"
-            android:textSize="25sp" />
+            android:textSize="30sp" />
 
         <TextView
             android:id="@+id/descriptionTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/pQuantityTV"
+            android:layout_below="@id/titleTV"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
             android:text="Product Description"
             android:textColor="@color/colorBlack"
             android:textSize="18sp"
-            android:layout_marginBottom="10dp"/>
-
-        <TextView
-            android:id="@+id/discountPercentTV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/shape_rect05"
-            android:padding="5dp"
-            android:text="10% Off"
-            android:textColor="@color/colorWhite"
-            android:textSize="15dp" />
-
+            android:padding="10dp"/>
     </RelativeLayout>
 
 </LinearLayout>

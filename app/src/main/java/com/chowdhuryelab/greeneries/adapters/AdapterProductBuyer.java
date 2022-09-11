@@ -119,20 +119,14 @@ public class AdapterProductBuyer extends RecyclerView.Adapter<AdapterProductBuye
 
         ImageView productIV = view.findViewById(R.id.productIV);
         final TextView titleTV = view.findViewById(R.id.titleTV);
-        TextView pQuantityTV = view.findViewById(R.id.pQuantityTV);
         TextView descriptionTV = view.findViewById(R.id.descriptionTV);
         TextView discountPercentTV = view.findViewById(R.id.discountPercentTV);
         final TextView orignalPriceTV = view.findViewById(R.id.orignalPriceTV);
         TextView discountPriceTV = view.findViewById(R.id.discountPriceTV);
-        final TextView finalPriceTV = view.findViewById(R.id.finalPriceTV);
-        ImageButton decreaseBtn = view.findViewById(R.id.decreaseBtn);
-        final TextView quantityTV = view.findViewById(R.id.quantityTV);
-        ImageButton increasBtn = view.findViewById(R.id.increasBtn);
-        Button continueBtn = view.findViewById(R.id.continueBtn);
+
 
         final String productId = modelProduct.getPrductId();
         String title = modelProduct.getPrductTitle();
-        String productQuantity = modelProduct.getPrductQuantity();
         String description = modelProduct.getPrductDescription();
         final String discountPercent = modelProduct.getDiscountPercent();
         final String image = modelProduct.getPrductIcon();
@@ -153,10 +147,6 @@ public class AdapterProductBuyer extends RecyclerView.Adapter<AdapterProductBuye
             discountPriceTV.setVisibility(View.GONE);
             price = modelProduct.getOrignalPrice();
         }
-        cost = Double.parseDouble(price.replaceAll("\u09F3", ""));
-        finalCost = Double.parseDouble(price.replaceAll("\u09F3", ""));
-        actualFinalCost = Double.parseDouble(orgnalPrice.replaceAll("\u09F3", ""));
-        quantity = 1;
 
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         builder.setView(view);
@@ -168,7 +158,6 @@ public class AdapterProductBuyer extends RecyclerView.Adapter<AdapterProductBuye
             productIV.setImageResource(R.drawable.ic_shopping_cart_black);
         }
         titleTV.setText(""+title);
-        pQuantityTV.setText(""+productQuantity);
         descriptionTV.setText(""+description);
         discountPercentTV.setText(""+discountPercent);
         orignalPriceTV.setText("\u09F3"+modelProduct.getOrignalPrice());

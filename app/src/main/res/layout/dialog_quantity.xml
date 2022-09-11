@@ -13,7 +13,7 @@
             android:layout_width="match_parent"
             android:layout_height="260dp"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
+            android:layout_margin="15dp"
             android:src="@drawable/ic_cart_type2" />
 
         <TextView
@@ -25,58 +25,65 @@
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
-            android:background="@drawable/shap_rect05"
+            android:background="@drawable/shape_rect05"
+            android:layout_margin="15dp"
             android:padding="5dp"
             android:text="10% Off"
-            android:textColor="@color/colorGreen"
-            android:textSize="12dp" />
+            android:textColor="@color/colorBlack"
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
+    </RelativeLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <TextView
+            android:id="@+id/titleTV"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/productIV"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:gravity="center_horizontal"
-            android:orientation="horizontal">
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="Product Title"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp" />
 
-            <ImageButton
-                android:id="@+id/decreaseBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_margin="10dp"
-                android:background="@null"
-                android:src="@drawable/ic_remove_black" />
+        <TextView
+            android:id="@+id/pQuantityTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleTV"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
 
-            <TextView
-                android:id="@+id/quantityTV"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:padding="2dp"
-                android:text="1"
-                android:textColor="@color/colorBlack"
-                android:textSize="20dp" />
+            android:text="Quantity"
+            android:textColor="@color/colorBlack"
+            android:textSize="16dp" />
 
-            <ImageButton
-                android:id="@+id/increasBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_margin="10dp"
-                android:background="@null"
-                android:src="@drawable/ic_add_black" />
+        <TextView
+            android:id="@+id/descriptionTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pQuantityTV"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:textSize="14sp"
+            android:text="Product Description"
+            android:textColor="@color/colorBlack" />
 
-        </LinearLayout>
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp">
+        android:layout_marginRight="5dp"
+        android:layout_gravity="center_horizontal">
 
         <TextView
             android:id="@+id/orignalPriceTV"
@@ -110,42 +117,44 @@
             android:gravity="start"
             android:textColor="@color/colorBlack" />
 
-        <TextView
-            android:id="@+id/titleTV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/productIV"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="5dp"
-            android:textSize="18sp"
-            android:text="Product Title"
-            android:textColor="@color/colorBlack" />
-
-        <TextView
-            android:id="@+id/pQuantityTV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/titleTV"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="5dp"
-
-            android:text="Quantity"
-            android:textColor="@color/colorBlack"
-            android:textSize="16dp" />
-
-        <TextView
-            android:id="@+id/descriptionTV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/pQuantityTV"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="5dp"
-            android:textSize="14sp"
-            android:text="Product Description"
-            android:textColor="@color/colorBlack" />
-
-
     </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/productIV"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/decreaseBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="10dp"
+            android:background="@null"
+            android:src="@drawable/ic_remove_black" />
+
+        <TextView
+            android:id="@+id/quantityTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="2dp"
+            android:text="1"
+            android:textColor="@color/colorBlack"
+            android:textSize="20dp" />
+
+        <ImageButton
+            android:id="@+id/increasBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="10dp"
+            android:background="@null"
+            android:src="@drawable/ic_add_black" />
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/continueBtn"
