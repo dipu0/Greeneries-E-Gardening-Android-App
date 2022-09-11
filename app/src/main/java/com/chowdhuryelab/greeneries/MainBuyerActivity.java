@@ -441,13 +441,11 @@ public class MainBuyerActivity extends AppCompatActivity {
                 orderList.clear();
                 for (DataSnapshot ds : dataSnapshot.getChildren()){
                     String uid = ""+ds.getRef().getKey();
-
                     DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Users").child(uid).child("Orders");
                     ref.orderByChild("orderBy").equalTo(mAuth.getUid())
-                            .addValueEventListener(new ValueEventListener() {
+                            .addListenerForSingleValueEvent(new ValueEventListener() {
                                 @Override
                                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                                    orderList.clear();
                                     if (dataSnapshot.exists()){
                                         for (DataSnapshot ds : dataSnapshot.getChildren()){
                                             ModelOrderUser modelOrderUser = ds.getValue(ModelOrderUser.class);
@@ -458,7 +456,6 @@ public class MainBuyerActivity extends AppCompatActivity {
                                         orderRv.setAdapter(adapterOrderUser);
                                     }
                                 }
-
                                 @Override
                                 public void onCancelled(@NonNull DatabaseError databaseError) {
 
