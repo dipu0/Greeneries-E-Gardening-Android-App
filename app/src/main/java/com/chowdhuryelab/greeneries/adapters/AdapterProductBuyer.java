@@ -90,18 +90,13 @@ public class AdapterProductBuyer extends RecyclerView.Adapter<AdapterProductBuye
             holder.productIv.setImageResource(R.drawable.ic_cart_white);
         }
 
-        holder.addToCartTv.setOnClickListener(new View.OnClickListener() {
+        holder.details.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showCartDialog(modelProduct);
             }
         });
-        holder.details.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showDetailsDialog(modelProduct);
-            }
-        });
+
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

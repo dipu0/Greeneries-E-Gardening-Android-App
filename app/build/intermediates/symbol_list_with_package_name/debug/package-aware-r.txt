@@ -1097,6 +1097,7 @@ bool enable_system_foreground_service_default
 bool enable_system_job_service_default
 bool mtrl_btn_textappearance_all_caps
 bool workmanager_test_configuration
+color CadmiumGreen
 color abc_background_cache_hint_selector_material_dark
 color abc_background_cache_hint_selector_material_light
 color abc_btn_colored_borderless_text_material
@@ -1905,6 +1906,7 @@ drawable shape_rect02
 drawable shape_rect05
 drawable shape_rect06
 drawable shape_rect07
+drawable shape_rect08
 drawable shop
 drawable shop2
 drawable test_custom_background
@@ -2715,6 +2717,7 @@ layout row_order_seller
 layout row_order_user
 layout row_ordered_items
 layout row_product_buyer
+layout row_product_buyer_2
 layout row_product_cart
 layout row_product_seller
 layout row_review

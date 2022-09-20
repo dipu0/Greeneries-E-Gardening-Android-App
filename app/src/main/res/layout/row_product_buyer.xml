@@ -7,8 +7,7 @@
     app:cardElevation="3dp"
     app:cardCornerRadius="20dp"
     app:contentPadding="5dp"
-    app:cardMaxElevation="5dp"
-    app:cardUseCompatPadding="true">
+    app:cardMaxElevation="5dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -28,60 +27,52 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
             android:layout_centerVertical="true"
             android:orientation="vertical"
             android:layout_toStartOf="@id/nextIV"
             android:layout_toLeftOf="@id/nextIV"
             android:layout_toEndOf="@id/productIconIV"
-            android:layout_toRightOf="@id/productIconIV">
-
-            <TextView
-                android:id="@+id/discountPercentTV"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:background="@drawable/shap_rect05"
-                android:padding="5dp"
-                android:text="10% Off"
-                android:textSize="12dp"
-                android:textColor="@color/colorGreen" />
+            android:layout_toRightOf="@id/productIconIV"
+            android:background="@drawable/shape_rect08">
 
             <TextView
                 android:id="@+id/titleTV"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
+                android:layout_marginRight="105dp"
                 android:text="Title"
+                android:textColor="@color/colorBlack"
                 android:textSize="20dp"
-                android:textStyle="bold"
-                android:textColor="@color/colorBlack" />
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/descriptionTV"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="105dp"
                 android:layout_below="@id/titleTV"
                 android:text="Product Description"
                 android:maxLines="2"
                 android:minLines="2"
                 android:textColor="@color/colorBlack" />
 
-            <TextView
-                android:id="@+id/addToCartTV"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/descriptionTV"
-                android:drawableEnd="@drawable/ic_shopping_cart_black"
-                android:drawableRight="@drawable/ic_shopping_cart_black"
-                android:gravity="center_vertical"
-                android:text="Add to Cart"
-                android:textColor="@color/colorPrimaryDark" />
+<!--            <TextView-->
+<!--                android:id="@+id/addToCartTV"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/descriptionTV"-->
+<!--                android:drawableEnd="@drawable/ic_shopping_cart_black"-->
+<!--                android:drawableRight="@drawable/ic_shopping_cart_black"-->
+<!--                android:gravity="center_vertical"-->
+<!--                android:text="Add to Cart"-->
+<!--                android:textColor="@color/colorPrimaryDark" />-->
 
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_below="@id/addToCartTV"
+                android:layout_below="@id/descriptionTV"
                 android:layout_marginTop="5dp">
 
                 <TextView
@@ -96,26 +87,35 @@
                     android:id="@+id/orignalPriceTV"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_toEndOf="@id/discountPriceTV"
                     android:layout_toRightOf="@id/discountPriceTV"
                     android:text="\u09F3 20"
                     android:textColor="@color/colorGray02" />
 
+                <TextView
+                    android:id="@+id/discountPercentTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/orignalPriceTV"
+                    android:background="@drawable/shap_rect05"
+                    android:padding="5dp"
+                    android:text="10% Off"
+                    android:textSize="12dp"
+                    android:textColor="@color/colorGreen" />
             </RelativeLayout>
 
-        </RelativeLayout>
+            <ImageView
+                android:id="@+id/nextIV"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_add_product_white" />
 
-        <ImageView
-            android:id="@+id/nextIV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:adjustViewBounds="true"
-            android:scaleType="fitCenter"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="5dp"
-            android:src="@drawable/ic_next_gray"/>
+        </RelativeLayout>
 
     </RelativeLayout>
 

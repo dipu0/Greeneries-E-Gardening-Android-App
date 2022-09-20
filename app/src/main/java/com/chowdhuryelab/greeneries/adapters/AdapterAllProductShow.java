@@ -343,13 +343,13 @@ public class AdapterAllProductShow extends RecyclerView.Adapter<AdapterAllProduc
             holder.orignalPriceTv.setPaintFlags(0);
         }
         try {
-            Picasso.get().load(productIcon).placeholder(R.drawable.ic_shopping_cart_black).into(holder.productIv);
+            Picasso.get().load(productIcon).placeholder(R.drawable.ic_add_product_white).into(holder.productIv);
         }
         catch (Exception e) {
             holder.productIv.setImageResource(R.drawable.ic_shopping_cart_black);
         }
 
-        holder.addToCartTv.setOnClickListener(new View.OnClickListener() {
+        holder.details.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (user == null){
@@ -383,12 +383,7 @@ public class AdapterAllProductShow extends RecyclerView.Adapter<AdapterAllProduc
 
             }
         });
-        holder.details.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showDetailsDialog(modelProduct);
-            }
-        });
+
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
