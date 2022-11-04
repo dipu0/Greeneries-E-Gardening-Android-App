@@ -96,11 +96,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@id/orignalPriceTV"
-                    android:background="@drawable/shap_rect05"
-                    android:padding="5dp"
+                    android:background="@drawable/shape_rect09"
                     android:text="10% Off"
-                    android:textSize="12dp"
-                    android:textColor="@color/colorGreen" />
+                    android:textColor="@color/colorGreen"
+                    android:textSize="12dp" />
             </RelativeLayout>
 
             <ImageView

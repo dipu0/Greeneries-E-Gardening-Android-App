@@ -42,7 +42,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:background="@drawable/shap_rect05"
+                android:background="@drawable/shape_rect09"
                 android:padding="5dp"
                 android:text="10% Off"
                 android:textSize="12dp"

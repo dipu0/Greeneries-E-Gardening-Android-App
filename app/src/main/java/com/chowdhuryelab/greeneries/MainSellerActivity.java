@@ -341,7 +341,7 @@ public class MainSellerActivity extends AppCompatActivity {
         tabProductTv.setBackgroundColor(getResources().getColor(android.R.color.transparent));
 
         tabOrdersTv.setTextColor(getResources().getColor(R.color.colorBlack));
-        tabOrdersTv.setBackgroundResource(R.drawable.shap_rect04);
+        tabOrdersTv.setBackgroundResource(R.drawable.shape_rect04);
     }
 
     private void showProductUI() {
@@ -349,7 +349,7 @@ public class MainSellerActivity extends AppCompatActivity {
         ordersRl.setVisibility(View.GONE);
 
         tabProductTv.setTextColor(getResources().getColor(R.color.colorBlack));
-        tabProductTv.setBackgroundResource(R.drawable.shap_rect04);
+        tabProductTv.setBackgroundResource(R.drawable.shape_rect04);
 
         tabOrdersTv.setTextColor(getResources().getColor(R.color.colorWhite));
         tabOrdersTv.setBackgroundColor(getResources().getColor(android.R.color.transparent));

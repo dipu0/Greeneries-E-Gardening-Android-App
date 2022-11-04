@@ -1,5 +1,6 @@
 package com.chowdhuryelab.greeneries;
 
+import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
@@ -116,6 +117,12 @@ public class MainBuyerActivity extends AppCompatActivity {
 
         FirebaseUser user = mAuth.getCurrentUser();
         if (user == null){
+
+            nameTv.setText("Greeneries");
+            emailTv.setVisibility(View.GONE);
+            phoneTv.setVisibility(View.GONE);
+            Picasso.get().load(R.drawable.icon_shop_round).into(profileIv);;
+
             showAllproductUI();
             loadAllProduct();
             LoadAllBlogs();
@@ -161,7 +168,6 @@ public class MainBuyerActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 if (user == null){
-                    toolbar.setVisibility(View.INVISIBLE);
                     AlertDialog.Builder builder = new AlertDialog.Builder(MainBuyerActivity.this);
                     builder.setTitle("Login Alert")
                             .setMessage("Are you sure, you want to continue ?")
@@ -199,7 +205,7 @@ public class MainBuyerActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (user == null){
-                    toolbar.setVisibility(View.INVISIBLE);
+
                     showAllproductUI();
                 }
                 else {
@@ -217,8 +223,6 @@ public class MainBuyerActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (user == null){
-                    toolbar.setVisibility(View.INVISIBLE);
-                    addBlogBtn.setVisibility(View.GONE);
                     showAllBlogUI();
                 }else{
                     showAllBlogUI();
@@ -231,7 +235,6 @@ public class MainBuyerActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (user == null){
-                    toolbar.setVisibility(View.INVISIBLE);
                     AlertDialog.Builder builder = new AlertDialog.Builder(MainBuyerActivity.this);
                     builder.setTitle("Login Alert")
                             .setMessage("Are you sure, you want to continue ?")
@@ -311,7 +314,7 @@ public class MainBuyerActivity extends AppCompatActivity {
         ordersRl.setVisibility(View.GONE);
 
         tabShopsTv.setTextColor(getResources().getColor(R.color.colorBlack));
-        tabShopsTv.setBackgroundResource(R.drawable.shap_rect04);
+        tabShopsTv.setBackgroundResource(R.drawable.shape_rect04);
 
         tabAllTv.setTextColor(getResources().getColor(R.color.colorWhite));
         tabAllTv.setBackgroundResource(android.R.color.transparent);
@@ -333,7 +336,7 @@ public class MainBuyerActivity extends AppCompatActivity {
         tabOrdersTv.setBackgroundColor(getResources().getColor(android.R.color.transparent));
 
         tabAllTv.setTextColor(getResources().getColor(R.color.colorBlack));
-        tabAllTv.setBackgroundResource(R.drawable.shap_rect04);
+        tabAllTv.setBackgroundResource(R.drawable.shape_rect04);
 
         tabBlogTv.setTextColor(getResources().getColor(R.color.colorWhite));
         tabBlogTv.setBackgroundColor(getResources().getColor(android.R.color.transparent));
@@ -352,7 +355,7 @@ public class MainBuyerActivity extends AppCompatActivity {
         tabOrdersTv.setBackgroundColor(getResources().getColor(android.R.color.transparent));
 
         tabBlogTv.setTextColor(getResources().getColor(R.color.colorBlack));
-        tabBlogTv.setBackgroundResource(R.drawable.shap_rect04);
+        tabBlogTv.setBackgroundResource(R.drawable.shape_rect04);
 
         tabAllTv.setTextColor(getResources().getColor(R.color.colorWhite));
         tabAllTv.setBackgroundColor(getResources().getColor(android.R.color.transparent));
@@ -369,7 +372,7 @@ public class MainBuyerActivity extends AppCompatActivity {
         ordersRl.setVisibility(View.VISIBLE);
 
         tabOrdersTv.setTextColor(getResources().getColor(R.color.colorBlack));
-        tabOrdersTv.setBackgroundResource(R.drawable.shap_rect04);
+        tabOrdersTv.setBackgroundResource(R.drawable.shape_rect04);
 
         tabAllTv.setTextColor(getResources().getColor(R.color.colorWhite));
         tabAllTv.setBackgroundResource(android.R.color.transparent);

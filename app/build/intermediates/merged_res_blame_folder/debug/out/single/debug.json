@@ -1,5 +1,9 @@
 [
     {
+        "merged": "com.chowdhuryelab.greeneries.app-merged_res-40:/layout_dialog_productdetails.xml.flat",
+        "source": "com.chowdhuryelab.greeneries.app-main-42:/layout/dialog_productdetails.xml"
+    },
+    {
         "merged": "C:\\Users\\cdipu\\.gradle\\daemon\\7.3.3\\com.chowdhuryelab.greeneries.app-merged_res-40:\\drawable-xxhdpi_ic_arrow_down.png.flat",
         "source": "C:\\Users\\cdipu\\.gradle\\daemon\\7.3.3\\com.chowdhuryelab.greeneries.app-pngs-35:\\drawable-xxhdpi\\ic_arrow_down.png"
     },
@@ -248,6 +252,10 @@
         "source": "C:\\Users\\cdipu\\.gradle\\daemon\\7.3.3\\com.chowdhuryelab.greeneries.app-pngs-35:\\drawable-xxhdpi\\ic_key_white.png"
     },
     {
+        "merged": "com.chowdhuryelab.greeneries.app-merged_res-40:/layout_activity_main_seller.xml.flat",
+        "source": "com.chowdhuryelab.greeneries.app-main-42:/layout/activity_main_seller.xml"
+    },
+    {
         "merged": "C:\\Users\\cdipu\\.gradle\\daemon\\7.3.3\\com.chowdhuryelab.greeneries.app-merged_res-40:\\drawable-hdpi_ic_add_procuct_primary.png.flat",
         "source": "C:\\Users\\cdipu\\.gradle\\daemon\\7.3.3\\com.chowdhuryelab.greeneries.app-pngs-35:\\drawable-hdpi\\ic_add_procuct_primary.png"
     },
@@ -296,12 +304,12 @@
         "source": "C:\\Users\\cdipu\\.gradle\\daemon\\7.3.3\\com.chowdhuryelab.greeneries.app-pngs-35:\\drawable-mdpi\\ic_key_gray.png"
     },
     {
-        "merged": "C:\\Users\\cdipu\\.gradle\\daemon\\7.3.3\\com.chowdhuryelab.greeneries.app-merged_res-40:\\drawable-xhdpi_ic_arrow_down.png.flat",
-        "source": "C:\\Users\\cdipu\\.gradle\\daemon\\7.3.3\\com.chowdhuryelab.greeneries.app-pngs-35:\\drawable-xhdpi\\ic_arrow_down.png"
-    },
-    {
         "merged": "C:\\Users\\cdipu\\.gradle\\daemon\\7.3.3\\com.chowdhuryelab.greeneries.app-merged_res-40:\\drawable-xxhdpi_ic_rate_review_white.png.flat",
         "source": "C:\\Users\\cdipu\\.gradle\\daemon\\7.3.3\\com.chowdhuryelab.greeneries.app-pngs-35:\\drawable-xxhdpi\\ic_rate_review_white.png"
+    },
+    {
+        "merged": "C:\\Users\\cdipu\\.gradle\\daemon\\7.3.3\\com.chowdhuryelab.greeneries.app-merged_res-40:\\drawable-xhdpi_ic_arrow_down.png.flat",
+        "source": "C:\\Users\\cdipu\\.gradle\\daemon\\7.3.3\\com.chowdhuryelab.greeneries.app-pngs-35:\\drawable-xhdpi\\ic_arrow_down.png"
     },
     {
         "merged": "C:\\Users\\cdipu\\.gradle\\daemon\\7.3.3\\com.chowdhuryelab.greeneries.app-merged_res-40:\\drawable-xxhdpi_ic_mail_gray.png.flat",
@@ -310,6 +318,10 @@
     {
         "merged": "C:\\Users\\cdipu\\.gradle\\daemon\\7.3.3\\com.chowdhuryelab.greeneries.app-merged_res-40:\\drawable-mdpi_ic_add_black.png.flat",
         "source": "C:\\Users\\cdipu\\.gradle\\daemon\\7.3.3\\com.chowdhuryelab.greeneries.app-pngs-35:\\drawable-mdpi\\ic_add_black.png"
+    },
+    {
+        "merged": "com.chowdhuryelab.greeneries.app-merged_res-40:/layout_bs_product_details_seller.xml.flat",
+        "source": "com.chowdhuryelab.greeneries.app-main-42:/layout/bs_product_details_seller.xml"
     },
     {
         "merged": "C:\\Users\\cdipu\\.gradle\\daemon\\7.3.3\\com.chowdhuryelab.greeneries.app-merged_res-40:\\font_bungee_inline.ttf.flat",
@@ -640,6 +652,10 @@
         "source": "C:\\Users\\cdipu\\.gradle\\daemon\\7.3.3\\com.chowdhuryelab.greeneries.app-main-42:\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
+        "merged": "C:\\Users\\cdipu\\.gradle\\daemon\\7.3.3\\com.chowdhuryelab.greeneries.app-merged_res-40:\\drawable_shape_rect08.xml.flat",
+        "source": "C:\\Users\\cdipu\\.gradle\\daemon\\7.3.3\\com.chowdhuryelab.greeneries.app-main-42:\\drawable\\shape_rect08.xml"
+    },
+    {
         "merged": "C:\\Users\\cdipu\\.gradle\\daemon\\7.3.3\\com.chowdhuryelab.greeneries.app-merged_res-40:\\layout_activity_cart.xml.flat",
         "source": "C:\\Users\\cdipu\\.gradle\\daemon\\7.3.3\\com.chowdhuryelab.greeneries.app-main-42:\\layout\\activity_cart.xml"
     },
@@ -754,6 +770,10 @@
     {
         "merged": "C:\\Users\\cdipu\\.gradle\\daemon\\7.3.3\\com.chowdhuryelab.greeneries.app-merged_res-40:\\drawable-xxhdpi_ic_quantity_gray.png.flat",
         "source": "C:\\Users\\cdipu\\.gradle\\daemon\\7.3.3\\com.chowdhuryelab.greeneries.app-pngs-35:\\drawable-xxhdpi\\ic_quantity_gray.png"
+    },
+    {
+        "merged": "com.chowdhuryelab.greeneries.app-merged_res-40:/layout_row_product_buyer_2.xml.flat",
+        "source": "com.chowdhuryelab.greeneries.app-main-42:/layout/row_product_buyer_2.xml"
     },
     {
         "merged": "C:\\Users\\cdipu\\.gradle\\daemon\\7.3.3\\com.chowdhuryelab.greeneries.app-merged_res-40:\\drawable-mdpi_ic_back_white.png.flat",
@@ -1008,6 +1028,10 @@
         "source": "C:\\Users\\cdipu\\.gradle\\daemon\\7.3.3\\com.chowdhuryelab.greeneries.app-pngs-35:\\drawable-ldpi\\ic_launcher_background.png"
     },
     {
+        "merged": "com.chowdhuryelab.greeneries.app-merged_res-40:/drawable_shape_rect04.xml.flat",
+        "source": "com.chowdhuryelab.greeneries.app-main-42:/drawable/shape_rect04.xml"
+    },
+    {
         "merged": "C:\\Users\\cdipu\\.gradle\\daemon\\7.3.3\\com.chowdhuryelab.greeneries.app-merged_res-40:\\drawable-xhdpi_ic_shopping_cart_black.png.flat",
         "source": "C:\\Users\\cdipu\\.gradle\\daemon\\7.3.3\\com.chowdhuryelab.greeneries.app-pngs-35:\\drawable-xhdpi\\ic_shopping_cart_black.png"
     },
@@ -1160,6 +1184,10 @@
         "source": "C:\\Users\\cdipu\\.gradle\\daemon\\7.3.3\\com.chowdhuryelab.greeneries.app-pngs-35:\\drawable-xxxhdpi\\ic_location_gray.png"
     },
     {
+        "merged": "com.chowdhuryelab.greeneries.app-merged_res-40:/drawable_shape_rect09.xml.flat",
+        "source": "com.chowdhuryelab.greeneries.app-main-42:/drawable/shape_rect09.xml"
+    },
+    {
         "merged": "C:\\Users\\cdipu\\.gradle\\daemon\\7.3.3\\com.chowdhuryelab.greeneries.app-merged_res-40:\\drawable-hdpi_ic_location_gray.png.flat",
         "source": "C:\\Users\\cdipu\\.gradle\\daemon\\7.3.3\\com.chowdhuryelab.greeneries.app-pngs-35:\\drawable-hdpi\\ic_location_gray.png"
     },
@@ -1182,10 +1210,6 @@
     {
         "merged": "C:\\Users\\cdipu\\.gradle\\daemon\\7.3.3\\com.chowdhuryelab.greeneries.app-merged_res-40:\\drawable-anydpi-v21_ic_add_procuct_primary.xml.flat",
         "source": "C:\\Users\\cdipu\\.gradle\\daemon\\7.3.3\\com.chowdhuryelab.greeneries.app-pngs-35:\\drawable-anydpi-v21\\ic_add_procuct_primary.xml"
-    },
-    {
-        "merged": "com.chowdhuryelab.greeneries.app-merged_res-40:/drawable_shape_rect08.xml.flat",
-        "source": "com.chowdhuryelab.greeneries.app-main-42:/drawable/shape_rect08.xml"
     },
     {
         "merged": "C:\\Users\\cdipu\\.gradle\\daemon\\7.3.3\\com.chowdhuryelab.greeneries.app-merged_res-40:\\drawable-xxxhdpi_ic_edit_white.png.flat",
@@ -1332,6 +1356,10 @@
         "source": "C:\\Users\\cdipu\\.gradle\\daemon\\7.3.3\\com.chowdhuryelab.greeneries.app-pngs-35:\\drawable-anydpi-v21\\ic_local_shipping_gray.xml"
     },
     {
+        "merged": "com.chowdhuryelab.greeneries.app-merged_res-40:/layout_activity_main_buyer.xml.flat",
+        "source": "com.chowdhuryelab.greeneries.app-main-42:/layout/activity_main_buyer.xml"
+    },
+    {
         "merged": "C:\\Users\\cdipu\\.gradle\\daemon\\7.3.3\\com.chowdhuryelab.greeneries.app-merged_res-40:\\drawable-xxxhdpi_ic_category_gray.png.flat",
         "source": "C:\\Users\\cdipu\\.gradle\\daemon\\7.3.3\\com.chowdhuryelab.greeneries.app-pngs-35:\\drawable-xxxhdpi\\ic_category_gray.png"
     },
@@ -1392,6 +1420,10 @@
         "source": "C:\\Users\\cdipu\\.gradle\\daemon\\7.3.3\\com.chowdhuryelab.greeneries.app-pngs-35:\\drawable-ldpi\\ic_arrow_down.png"
     },
     {
+        "merged": "com.chowdhuryelab.greeneries.app-merged_res-40:/drawable_shape_rect03.xml.flat",
+        "source": "com.chowdhuryelab.greeneries.app-main-42:/drawable/shape_rect03.xml"
+    },
+    {
         "merged": "C:\\Users\\cdipu\\.gradle\\daemon\\7.3.3\\com.chowdhuryelab.greeneries.app-merged_res-40:\\drawable-xxxhdpi_ic_key_gray.png.flat",
         "source": "C:\\Users\\cdipu\\.gradle\\daemon\\7.3.3\\com.chowdhuryelab.greeneries.app-pngs-35:\\drawable-xxxhdpi\\ic_key_gray.png"
     },
@@ -1414,5 +1446,9 @@
     {
         "merged": "C:\\Users\\cdipu\\.gradle\\daemon\\7.3.3\\com.chowdhuryelab.greeneries.app-merged_res-40:\\drawable-anydpi-v21_ic_shopping_cart_black.xml.flat",
         "source": "C:\\Users\\cdipu\\.gradle\\daemon\\7.3.3\\com.chowdhuryelab.greeneries.app-pngs-35:\\drawable-anydpi-v21\\ic_shopping_cart_black.xml"
+    },
+    {
+        "merged": "com.chowdhuryelab.greeneries.app-merged_res-40:/layout_row_product_seller.xml.flat",
+        "source": "com.chowdhuryelab.greeneries.app-main-42:/layout/row_product_seller.xml"
     }
 ]

@@ -80,7 +80,7 @@
             android:id="@+id/discountPercTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/shap_rect05"
+            android:background="@drawable/shape_rect09"
             android:padding="5dp"
             android:paddingEnd="5dp"
             android:paddingRight="5dp"

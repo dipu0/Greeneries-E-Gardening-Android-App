@@ -222,7 +222,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/shap_rect04"
+            android:background="@drawable/shape_rect04"
             android:gravity="center"
             android:text="Product"
             android:textColor="@color/colorBlack" />
