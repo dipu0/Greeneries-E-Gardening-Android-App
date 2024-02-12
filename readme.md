@@ -10,7 +10,7 @@ We have tried to make our app as user-friendly as much as possible. The flowchar
 ![](ScreenShots/Aspose.Words.43fdb35e-a22b-4e8f-ae8d-5b5c2a14676a.001.png)
 
 # Icon
-![icon](ScreenShots/icon_shop.png)
+<img src="ScreenShots/icon_shop.png" alt="icon" height="100" width="100">
 
 # Overview of Greeneries App:
 
